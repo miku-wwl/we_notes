@@ -1,0 +1,27 @@
+### 创建 Imoocer
+POST http://127.0.0.1:8888/api/imoocer/create
+Content-Type: application/json
+
+{
+  "name": "勤一",
+  "age": 19,
+  "salary": 1000,
+  "courses": [
+    {
+      "courseName": "广告",
+      "teacher": "勤一"
+    }
+  ]
+}
+
+### 查看 Imoocer
+GET http://127.0.0.1:8888/api/imoocer/info
+
+### RuntimeException 请求
+GET http://127.0.0.1:8888/api/exception/runtime
+
+### BizException 请求
+GET http://127.0.0.1:8888/api/exception/biz-exception
+
+### 审核 Imoocer 头像
+GET http://127.0.0.1:8888/api/imoocer/audit

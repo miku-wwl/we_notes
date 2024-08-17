@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd5a2fed-0901-482e-9f0f-21d29da42be9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1peGqM1MwmKA7PWgtZNTEUpTD85" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2410107" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imooc.log.stack.advice" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/imooc/log/stack/analyzer" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8888/api/imoocer/audit" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8888/api/exception/biz-exception" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8888/api/exception/runtime" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8888/api/imoocer/info" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8888/api/imoocer/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;name&quot;: &quot;勤一&quot;,&#10;  &quot;age&quot;: 19,&#10;  &quot;salary&quot;: 1000,&#10;  &quot;courses&quot;: [&#10;    {&#10;      &quot;courseName&quot;: &quot;广告&quot;,&#10;      &quot;teacher&quot;: &quot;勤一&quot;&#10;    }&#10;  ]&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LogStackApplication">
+    <configuration name="imoocer#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/imoocer.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="imoocer#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/imoocer.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="imoocer#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/imoocer.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="imoocer#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/imoocer.http" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="LogStackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="log-stack-springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.log.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.log.stack.LogStackApplication" />
+      <option name="VM_PARAMETERS" value="-Xms1024M -Xmx1024M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.imoocer#2" />
+      <item itemvalue="HTTP Request.imoocer#3" />
+      <item itemvalue="HTTP Request.imoocer#4" />
+      <item itemvalue="HTTP Request.imoocer#5" />
+      <item itemvalue="Spring Boot.LogStackApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.LogStackApplication" />
+        <item itemvalue="HTTP Request.imoocer#5" />
+        <item itemvalue="HTTP Request.imoocer#4" />
+        <item itemvalue="HTTP Request.imoocer#3" />
+        <item itemvalue="HTTP Request.imoocer#2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd5a2fed-0901-482e-9f0f-21d29da42be9" name="Default Changelist" comment="" />
+      <created>1615536331939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615536331939</updated>
+      <workItem from="1615536333528" duration="1250000" />
+      <workItem from="1615704172012" duration="2685000" />
+      <workItem from="1615708258361" duration="1242000" />
+      <workItem from="1615709515444" duration="4798000" />
+      <workItem from="1615870596067" duration="9000" />
+      <workItem from="1615961955777" duration="242000" />
+      <workItem from="1615962380126" duration="7410000" />
+      <workItem from="1616485853438" duration="691000" />
+      <workItem from="1616576257257" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="1" width="1440" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615972095765">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="0" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1615972095765" />
+    <state x="0" y="24" width="1440" height="876" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1615709387346" />
+    <state x="392" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1615971260604">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="392" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1615971260604" />
+    <state x="214" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615709472337">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="214" y="232" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1615709472337" />
+    <state width="1366" height="527" key="GridCell.Tab.0.bottom" timestamp="1615973719510">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1615972701782" />
+    <state width="1366" height="527" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719510" />
+    <state width="1360" height="522" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770880" />
+    <state width="1360" height="515" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1615710219473" />
+    <state width="1366" height="527" key="GridCell.Tab.0.center" timestamp="1615973719509">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1615972701779" />
+    <state width="1366" height="527" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719509" />
+    <state width="1360" height="522" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770879" />
+    <state width="1360" height="515" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1615710219471" />
+    <state width="1366" height="527" key="GridCell.Tab.0.left" timestamp="1615973719509">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1615972701777" />
+    <state width="1366" height="527" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719509" />
+    <state width="1360" height="522" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770878" />
+    <state width="1360" height="515" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1615710219470" />
+    <state width="1366" height="527" key="GridCell.Tab.0.right" timestamp="1615973719509">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1615972701781" />
+    <state width="1366" height="527" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719509" />
+    <state width="1360" height="522" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770879" />
+    <state width="1360" height="515" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1615710219472" />
+    <state width="1366" height="552" key="GridCell.Tab.1.bottom" timestamp="1615973719505">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1615972701786" />
+    <state width="1366" height="552" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719505" />
+    <state width="1360" height="522" key="GridCell.Tab.1.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770870" />
+    <state width="1360" height="515" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1615710219475" />
+    <state width="1366" height="552" key="GridCell.Tab.1.center" timestamp="1615973719504">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1615972701784" />
+    <state width="1366" height="552" key="GridCell.Tab.1.center/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719504" />
+    <state width="1360" height="522" key="GridCell.Tab.1.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770869" />
+    <state width="1360" height="515" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1615710219474" />
+    <state width="1366" height="552" key="GridCell.Tab.1.left" timestamp="1615973719503">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1615972701783" />
+    <state width="1366" height="552" key="GridCell.Tab.1.left/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719503" />
+    <state width="1360" height="522" key="GridCell.Tab.1.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770868" />
+    <state width="1360" height="515" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1615710219473" />
+    <state width="1366" height="552" key="GridCell.Tab.1.right" timestamp="1615973719504">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1366" height="552" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1615972701785" />
+    <state width="1366" height="552" key="GridCell.Tab.1.right/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973719504" />
+    <state width="1360" height="522" key="GridCell.Tab.1.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1615723770869" />
+    <state width="1360" height="515" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1615710219474" />
+    <state x="-1920" y="23" key="SettingsEditor" timestamp="1615973717785">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1615963129405" />
+    <state x="-1920" y="23" key="SettingsEditor/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1615973717785" />
+    <state x="0" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1615709626662" />
+    <state x="79" y="0" width="1281" height="1972" key="search.everywhere.popup" timestamp="1615710450589">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="79" y="0" width="1281" height="1972" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1615710450589" />
+  </component>
+</project>

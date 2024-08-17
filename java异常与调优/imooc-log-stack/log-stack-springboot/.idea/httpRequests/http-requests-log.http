@@ -1,0 +1,74 @@
+GET http://127.0.0.1:8888/api/imoocer/audit
+
+<> 2021-03-17T035858.200.json
+
+###
+
+GET http://127.0.0.1:8888/api/exception/biz-exception
+
+<> 2021-03-17T031228.200.json
+
+###
+
+GET http://127.0.0.1:8888/api/exception/biz-exception
+
+<> 2021-03-17T030932.500.json
+
+###
+
+GET http://127.0.0.1:8888/api/exception/runtime
+
+<> 2021-03-17T030842.200.json
+
+###
+
+GET http://127.0.0.1:8888/api/imoocer/info
+
+<> 2021-03-14T061040.200.json
+
+###
+
+POST http://127.0.0.1:8888/api/imoocer/create
+Content-Type: application/json
+
+{
+  "name": "勤一",
+  "age": 19,
+  "salary": 1000,
+  "courses": [
+    {
+      "courseName": "广告",
+      "teacher": "勤一"
+    }
+  ]
+}
+
+<> 2021-03-14T060937.200.json
+
+###
+
+GET http://127.0.0.1:8888/api/imoocer/info
+
+<> 2021-03-14T054515.200.json
+
+###
+
+POST http://127.0.0.1:8888/api/imoocer/create
+Content-Type: application/json
+
+{
+  "name": "勤一",
+  "age": 19,
+  "salary": 1000,
+  "courses": [
+    {
+      "courseName": "广告",
+      "teacher": "勤一"
+    }
+  ]
+}
+
+<> 2021-03-14T054511.200.json
+
+###
+

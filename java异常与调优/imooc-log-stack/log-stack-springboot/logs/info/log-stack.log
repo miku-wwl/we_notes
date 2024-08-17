@@ -1,0 +1,110 @@
+15:08:09.795 [main] INFO  c.i.log.stack.LogStackApplication 50 - Starting LogStackApplication on ITCNSHG-XN0083 with PID 10210 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot/target/classes started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot)
+15:08:09.806 [main] INFO  c.i.log.stack.LogStackApplication 675 - No active profile set, falling back to default profiles: default
+15:08:10.951 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:08:10.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:11.002 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+15:08:11.795 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8888 (http)
+15:08:11.814 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8888"]
+15:08:11.826 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+15:08:11.826 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:08:11.938 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+15:08:11.939 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 2064 ms
+15:08:13.209 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+15:08:13.261 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8888"]
+15:08:13.317 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8888 (http) with context path '/api'
+15:08:13.321 [main] INFO  c.i.log.stack.LogStackApplication 59 - Started LogStackApplication in 4.092 seconds (JVM running for 4.791)
+15:08:13.533 [RMI TCP Connection(2)-192.168.1.2] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:08:13.534 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+15:08:13.544 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 10 ms
+15:12:06.807 [main] INFO  c.i.log.stack.LogStackApplication 50 - Starting LogStackApplication on ITCNSHG-XN0083 with PID 10977 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot/target/classes started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot)
+15:12:06.812 [main] INFO  c.i.log.stack.LogStackApplication 675 - No active profile set, falling back to default profiles: default
+15:12:07.740 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:12:07.742 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:12:07.780 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+15:12:08.459 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8888 (http)
+15:12:08.472 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8888"]
+15:12:08.480 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+15:12:08.480 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:12:08.567 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+15:12:08.567 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 1709 ms
+15:12:09.663 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+15:12:09.714 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8888"]
+15:12:09.762 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8888 (http) with context path '/api'
+15:12:09.766 [main] INFO  c.i.log.stack.LogStackApplication 59 - Started LogStackApplication in 3.273 seconds (JVM running for 4.019)
+15:12:10.248 [RMI TCP Connection(2)-192.168.1.2] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:12:10.248 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+15:12:10.258 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 10 ms
+15:58:08.937 [main] INFO  c.i.log.stack.LogStackApplication 50 - Starting LogStackApplication on ITCNSHG-XN0083 with PID 20045 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot/target/classes started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot)
+15:58:08.943 [main] INFO  c.i.log.stack.LogStackApplication 675 - No active profile set, falling back to default profiles: default
+15:58:09.837 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+15:58:09.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:58:09.874 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+15:58:10.605 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8888 (http)
+15:58:10.619 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8888"]
+15:58:10.627 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+15:58:10.627 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:58:10.741 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+15:58:10.741 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 1749 ms
+15:58:11.838 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+15:58:11.889 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8888"]
+15:58:11.937 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8888 (http) with context path '/api'
+15:58:11.940 [main] INFO  c.i.log.stack.LogStackApplication 59 - Started LogStackApplication in 3.354 seconds (JVM running for 4.058)
+15:58:12.313 [RMI TCP Connection(2)-192.168.1.2] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:58:12.313 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+15:58:12.323 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 9 ms
+15:58:27.877 [ForkJoinPool.commonPool-worker-2] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.877 [ForkJoinPool.commonPool-worker-3] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.877 [ForkJoinPool.commonPool-worker-4] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.878 [ForkJoinPool.commonPool-worker-6] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.866 [ForkJoinPool.commonPool-worker-1] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.878 [ForkJoinPool.commonPool-worker-5] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+15:58:27.878 [ForkJoinPool.commonPool-worker-7] INFO  c.i.l.s.service.ImoocerServiceImpl 119 - coming in compute pic: [fangao.jpg]
+17:08:25.640 [main] INFO  c.i.log.stack.LogStackApplication 50 - Starting LogStackApplication on ITCNSHG-XN0083 with PID 33883 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot/target/classes started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot)
+17:08:25.644 [main] INFO  c.i.log.stack.LogStackApplication 675 - No active profile set, falling back to default profiles: default
+17:08:26.806 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:08:26.811 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+17:08:26.929 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+17:08:27.926 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8888 (http)
+17:08:27.940 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8888"]
+17:08:27.950 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+17:08:27.951 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+17:08:28.045 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+17:08:28.046 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 2359 ms
+17:08:28.829 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor 171 - Initializing ExecutorService
+17:08:28.830 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor 171 - Initializing ExecutorService 'mvcTaskExecutor'
+17:08:29.619 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler 171 - Initializing ExecutorService 'taskScheduler'
+17:08:29.654 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+17:08:29.726 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8888"]
+17:08:29.731 [imooc-qinyi-1] INFO  c.i.l.s.scheduled.ImoocerReportTask 27 - start to generate XSSFWorkbook
+17:08:29.795 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8888 (http) with context path '/api'
+17:08:29.798 [main] INFO  c.i.log.stack.LogStackApplication 59 - Started LogStackApplication in 4.533 seconds (JVM running for 5.208)
+17:08:30.114 [RMI TCP Connection(4)-192.168.1.2] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:08:30.114 [RMI TCP Connection(4)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+17:08:30.126 [RMI TCP Connection(4)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 12 ms
+17:10:13.494 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskScheduler 208 - Shutting down ExecutorService 'taskScheduler'
+17:10:13.500 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor 208 - Shutting down ExecutorService 'mvcTaskExecutor'
+17:17:03.998 [main] INFO  c.i.log.stack.LogStackApplication 50 - Starting LogStackApplication on ITCNSHG-XN0083 with PID 35555 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot/target/classes started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-springboot)
+17:17:04.001 [main] INFO  c.i.log.stack.LogStackApplication 675 - No active profile set, falling back to default profiles: default
+17:17:04.826 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:17:04.828 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+17:17:04.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+17:17:05.648 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8888 (http)
+17:17:05.661 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8888"]
+17:17:05.669 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+17:17:05.669 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+17:17:05.742 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+17:17:05.742 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 1701 ms
+17:17:06.370 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor 171 - Initializing ExecutorService
+17:17:06.372 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor 171 - Initializing ExecutorService 'mvcTaskExecutor'
+17:17:06.971 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler 171 - Initializing ExecutorService 'taskScheduler'
+17:17:06.999 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+17:17:07.059 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8888"]
+17:17:07.062 [imooc-qinyi-1] INFO  c.i.l.s.scheduled.ImoocerReportTask 55 - start to generate SXSSFWorkbook
+17:17:07.116 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8888 (http) with context path '/api'
+17:17:07.120 [main] INFO  c.i.log.stack.LogStackApplication 59 - Started LogStackApplication in 3.404 seconds (JVM running for 4.058)
+17:17:07.437 [RMI TCP Connection(2)-192.168.1.2] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:17:07.438 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+17:17:07.448 [RMI TCP Connection(2)-192.168.1.2] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 10 ms
+17:17:24.126 [imooc-qinyi-1] INFO  c.i.l.s.scheduled.ImoocerReportTask 76 - generate SXSSFWorkbook elapsed: [17061ms]
+17:35:00.740 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskScheduler 208 - Shutting down ExecutorService 'taskScheduler'
+17:35:00.751 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor 208 - Shutting down ExecutorService 'mvcTaskExecutor'

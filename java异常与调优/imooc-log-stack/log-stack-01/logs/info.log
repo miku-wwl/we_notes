@@ -1,0 +1,14 @@
+[09:02:19:687] [INFO] - com.imooc.log.stack.chapter4.JCLBinding.main(JCLBinding.java:14) - JCL Binding log4j2
+[09:09:26:713] [INFO] - com.imooc.log.stack.chapter4.JCLBinding.main(JCLBinding.java:14) - JCL Binding log4j2
+[10:29:29:971] [ERROR] - com.imooc.log.stack.chapter4.UseLog4j2.main(UseLog4j2.java:19) - use jcl + log4j2 to log
+[10:29:29:973] [INFO] - com.imooc.log.stack.chapter4.UseLog4j2.main(UseLog4j2.java:20) - use jcl + log4j2 to log
+[10:29:29:974] [INFO] - com.imooc.log.stack.chapter4.UseLog4j2.main(UseLog4j2.java:21) - use lo4j2 to log
+[10:32:19:213] [INFO] - com.imooc.log.stack.chapter4.UseLog4j2.placeholder(UseLog4j2.java:21) - use placeholder, not: [abcde]
+[10:33:48:915] [ERROR] - com.imooc.log.stack.chapter4.UseLog4j2.logWithException(UseLog4j2.java:32) - parse int has some error
+[10:34:28:160] [ERROR] - com.imooc.log.stack.chapter4.UseLog4j2.logWithException(UseLog4j2.java:32) - parse int has some error
+java.lang.NumberFormatException: For input string: "a"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[?:1.8.0_275]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[?:1.8.0_275]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_275]
+	at com.imooc.log.stack.chapter4.UseLog4j2.logWithException(UseLog4j2.java:30) [classes/:?]
+	at com.imooc.log.stack.chapter4.UseLog4j2.main(UseLog4j2.java:45) [classes/:?]

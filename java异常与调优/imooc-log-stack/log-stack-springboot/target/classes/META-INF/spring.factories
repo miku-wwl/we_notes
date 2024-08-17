@@ -1,0 +1,4 @@
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  com.imooc.log.stack.analyzer.IllegalArgumentFailureAnalyzer,\
+  com.imooc.log.stack.analyzer.NullPointerFailureAnalyzer
+

@@ -1,0 +1,33 @@
+14:05:21.870 [main] INFO  com.imooc.log.stack.Application 50 - Starting Application v1.0-SNAPSHOT on ITCNSHG-XN0083 with PID 76095 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-02/target/log-stack-02.jar started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-02/target)
+14:05:21.875 [main] INFO  com.imooc.log.stack.Application 675 - No active profile set, falling back to default profiles: default
+14:05:23.356 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:05:23.364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+14:05:23.441 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+14:05:24.711 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8000 (http)
+14:05:24.741 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8000"]
+14:05:24.758 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+14:05:24.760 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+14:05:24.909 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+14:05:24.910 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 2967 ms
+14:05:26.374 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+14:05:26.437 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8000"]
+14:05:26.481 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8000 (http) with context path '/api'
+14:05:26.485 [main] INFO  com.imooc.log.stack.Application 59 - Started Application in 5.113 seconds (JVM running for 5.755)
+14:06:58.604 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:06:58.605 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet 524 - Initializing Servlet 'dispatcherServlet'
+14:06:58.617 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet 546 - Completed initialization in 12 ms
+14:18:45.566 [main] INFO  com.imooc.log.stack.Application 50 - Starting Application v1.0-SNAPSHOT on ITCNSHG-XN0083 with PID 78752 (/Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-02/target/log-stack-02.jar started by brzha12 in /Users/brzha12/brzha_imooc/imooc_log_stack/display/log-stack-02/target)
+14:18:45.571 [main] INFO  com.imooc.log.stack.Application 675 - No active profile set, falling back to default profiles: default
+14:18:47.415 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:18:47.424 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+14:18:47.504 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate 182 - Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+14:18:48.737 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 90 - Tomcat initialized with port(s): 8000 (http)
+14:18:48.770 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Initializing ProtocolHandler ["http-nio-8000"]
+14:18:48.791 [main] INFO  o.a.catalina.core.StandardService 173 - Starting service [Tomcat]
+14:18:48.792 [main] INFO  o.a.catalina.core.StandardEngine 173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+14:18:48.979 [main] INFO  o.a.c.c.C.[.[localhost].[/api] 173 - Initializing Spring embedded WebApplicationContext
+14:18:48.980 [main] INFO  o.s.web.context.ContextLoader 296 - Root WebApplicationContext: initialization completed in 3307 ms
+14:18:50.841 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver 59 - Exposing 15 endpoint(s) beneath base path '/actuator'
+14:18:50.943 [main] INFO  o.a.coyote.http11.Http11NioProtocol 173 - Starting ProtocolHandler ["http-nio-8000"]
+14:18:50.995 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer 204 - Tomcat started on port(s): 8000 (http) with context path '/api'
+14:18:51.001 [main] INFO  com.imooc.log.stack.Application 59 - Started Application in 6.199 seconds (JVM running for 7.018)
