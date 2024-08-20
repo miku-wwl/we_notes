@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.mapper.UserInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.bjpowernode.entity.UserInfo">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="nick" column="nick" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="INTEGER"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap id="UserResultMap" type="com.bjpowernode.entity.UserInfo">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="nick" column="nick" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="INTEGER"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <association property="userImageDO" javaType="com.bjpowernode.entity.UserImage">
+            <id property="id" column="iid" jdbcType="INTEGER"/>
+            <result property="bucket" column="imageBucket" jdbcType="VARCHAR"/>
+            <result property="object" column="imageObject" jdbcType="VARCHAR"/>
+        </association>
+        <association property="userContractDO" javaType="com.bjpowernode.entity.UserContract">
+            <id property="id" column="cid" jdbcType="INTEGER"/>
+            <result property="bucket" column="contractBucket" jdbcType="VARCHAR"/>
+            <result property="object" column="contractObject" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,nick,password,
+        sex,phone,email,
+        address,create_time,update_time
+    </sql>
+
+    <select id="selectUserById" parameterType="java.lang.Integer" resultMap="UserResultMap">
+        select
+            u.*,
+            i.id iid, i.bucket imageBucket, i.object imageObject,
+            c.id cid, c.bucket contractBucket, c.object contractObject
+        from t_user_info u
+                        left join t_user_image i on u.id = i.uid
+                        left join t_user_contract c on u.id = c.uid
+        where u.id = #{id}
+    </select>
+
+    <select id="selectUserList" resultMap="UserResultMap">
+        select
+            u.*,
+            i.id iid, i.bucket imageBucket, i.object imageObject,
+            c.id cid, c.bucket contractBucket, c.object contractObject
+        from t_user_info u
+                 left join t_user_image i on u.id = i.uid
+                 left join t_user_contract c on u.id = c.uid
+    </select>
+</mapper>
