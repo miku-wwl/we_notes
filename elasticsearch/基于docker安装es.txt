@@ -1,0 +1,21 @@
+基于Docker安装Elasticsearch【保姆级教程、内含图解】
+https://blog.csdn.net/Acloasia/article/details/130683934
+
+
+Docker 镜像从一台机器移动到另一台机器
+
+### 1. 使用 `docker save` 和 `docker load`
+
+这种方法是直接导出和导入镜像文件。
+
+**导出镜像：**
+在原始机器上使用 `docker save` 命令将镜像保存为 tar 文件：
+```bash
+docker save -o /path/to/image.tar your-image-name:tag
+```
+
+**导入镜像：**
+在目标机器上使用 `docker load` 命令加载 tar 文件：
+```bash
+docker load -i /path/to/image.tar
+```
