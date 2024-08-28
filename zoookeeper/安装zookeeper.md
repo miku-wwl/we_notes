@@ -26,3 +26,12 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
+
+一些指令
+ls -R /
+ls -R /dubbo
+get /dubbo/com.imooc.user.provider.service.UserCenterUserService
+
+dubbo注册zookeeper问题wiki
+https://blog.csdn.net/qq_42971035/article/details/129599758
+https://blog.csdn.net/qq_41426990/article/details/125830495
