@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: dubbo-provider
+
+
+server:
+  port: 8081
+
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+#    address: zookeeper://101.126.19.236:2181
+    address: nacos://101.126.19.236:8848
+    timeout: 50000
+    parameters:
+      blockUntilConnectedWait:
+        50
+  protocol:
+    name: dubbo
+    port: 20881
+
