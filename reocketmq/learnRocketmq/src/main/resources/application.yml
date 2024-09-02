@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: rocketmq
+
+server:
+  port: 8081
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: producer-group
+  pull-consumer:
+    group: consumer-group
+    topic: consumer-topic
+
+topic:
+  data-center:
+    example: example-topic
