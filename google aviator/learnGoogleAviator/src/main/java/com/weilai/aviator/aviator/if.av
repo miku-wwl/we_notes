@@ -1,0 +1,9 @@
+let a = 2;
+let b = 3;
+if a>b {
+  p("#{a} > #{b}");
+} elsif a<b {
+  p("#{a} < #{b}");
+} else {
+  p("#{a} = #{b}");
+}

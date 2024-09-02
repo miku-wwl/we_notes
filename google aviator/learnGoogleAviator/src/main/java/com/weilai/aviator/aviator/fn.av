@@ -1,0 +1,29 @@
+fn add(x, y) {
+  return x+y;
+}
+three = add(1, 2);
+println("add1 = #{three}");
+
+three = add("1", 2);
+println("add2 = #{three}");
+
+## 函数重载
+fn add(x, y, z) {
+  return x+y+z;
+}
+three = add(1, 2, 3);
+println("add3 = #{three}");
+
+## 不定参数, *就相当于参数解包，类似于我们java stream里面的flatMap，将一个多维的集合，压平成一个一维的集合
+fn add(x, &y) {
+  ## add(1,2,3) , list(1, list(2,3)) -> list(1, 2, 3)
+  let list = seq.list(x, *y);
+  let sum = 0;
+  for i in list {
+     sum = sum + i;
+  }
+  return sum;
+}
+
+three = add(1, 2, 3, 4, 5);
+println("add4 = #{three}");
