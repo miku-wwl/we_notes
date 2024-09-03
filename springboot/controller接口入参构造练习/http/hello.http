@@ -1,0 +1,88 @@
+#### User Login Request
+POST http://localhost:8080/api/v1/login
+Content-Type: application/json
+
+{
+  "username": "testUser",
+  "password": "securePassword",
+  "lastLogin": "2024-01-01"
+}
+
+#### Product List Request
+POST http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+  "productIds": ["123", "456", "789"],
+  "category": "Electronics"
+}
+
+##### Order Creation Request
+POST http://localhost:8080/api/v1/orders
+Content-Type: application/json
+
+{
+  "customerId": "CUST12345",
+  "totalPrice": 123.45,
+  "expressShipping": true
+}
+
+### Configuration Update Request
+POST http://localhost:8080/api/v1/config
+Content-Type: application/json
+
+{
+  "settings": {
+    "theme": "dark",
+    "language": "en"
+  }
+}
+
+### Article Search Request
+POST http://localhost:8080/api/v1/articles/search
+Content-Type: application/json
+
+{
+  "keyword": "AI",
+  "year": 2024
+}
+
+### Event Schedule Request
+POST http://localhost:8080/api/v1/events/schedule
+Content-Type: application/json
+
+{
+  "eventName": "Conference",
+  "eventDate": "2024-09-03"
+}
+
+### Notification Preference Request
+POST http://localhost:8080/api/v1/users/preferences
+Content-Type: application/json
+
+{
+  "userId": "USER12345",
+  "emailEnabled": false,
+  "smsEnabled": true
+}
+
+### Feedback Submit Request
+POST http://localhost:8080/api/v1/feedback/submit
+Content-Type: application/json
+
+{
+  "feedbackText": "Great service!",
+  "rating": 5
+}
+
+### Role Assignment Request
+POST http://localhost:8080/api/v1/users/roles
+Content-Type: application/json
+
+{
+  "userId": "USER12345",
+  "roles": [
+    "admin",
+    "editor"
+  ]
+}
