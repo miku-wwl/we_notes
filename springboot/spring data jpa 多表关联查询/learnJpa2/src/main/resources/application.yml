@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://101.126.19.236:3306/learn_jpa?serverTimezone=CST
+    url: jdbc:mysql://127.0.0.1:3306/learn_jpa?serverTimezone=CST
     username: root
-    password: 32110219miku!
+    password: 
 
 
   jpa:
