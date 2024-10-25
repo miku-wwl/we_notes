@@ -1,0 +1,22 @@
+nacos 重要配置： 必须在bootstrap.yml 里面配置
+
+``` yml
+ spring:
+  profiles:
+    active: dev
+  application:
+    name: nacos-config-example
+  cloud:
+    nacos:
+      config:
+        serverAddr: 127.0.0.1:8848
+        username: 'nacos'
+        password: 'nacos'
+        prefix: 'hello world'
+        file-extension: yaml
+        namespace: xxxxxv
+        group: xxxxxx   
+```
+
+有用的wiki
+https://blog.csdn.net/a745233700/article/details/122916208
