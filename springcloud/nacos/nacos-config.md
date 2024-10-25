@@ -1,4 +1,4 @@
-nacos 重要配置： 必须在bootstrap.yml 里面配置
+nacos 重要配置： 必须在bootstrap.yml 里面配置， 否则会导致动态刷新失败，@RefreshScope也无效的问题。
 
 ``` yml
  spring:
