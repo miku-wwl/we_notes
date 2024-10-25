@@ -1,7 +1,7 @@
-nacos 重要配置： 必须在bootstrap.yml 里面配置， 否则会导致动态刷新失败，@RefreshScope也无效的问题。
+nacos 重要配置： 必须在 bootstrap.yml 里面配置， 否则会导致动态刷新失败，@RefreshScope 也无效的问题。
 
-``` yml
- spring:
+```yml
+spring:
   profiles:
     active: dev
   application:
@@ -10,13 +10,16 @@ nacos 重要配置： 必须在bootstrap.yml 里面配置， 否则会导致动�
     nacos:
       config:
         serverAddr: 127.0.0.1:8848
-        username: 'nacos'
-        password: 'nacos'
-        prefix: 'hello world'
+        username: "nacos"
+        password: "nacos"
+        prefix: "hello world"
         file-extension: yaml
         namespace: xxxxxv
-        group: xxxxxx   
+        group: xxxxxx
 ```
 
-有用的wiki
+有用的 wiki
 https://blog.csdn.net/a745233700/article/details/122916208
+
+nacos 快速部署
+https://nacos.io/zh-cn/docs/quick-start.html
