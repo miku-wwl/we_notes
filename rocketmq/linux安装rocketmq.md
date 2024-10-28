@@ -4,6 +4,10 @@ unzip rocketmq-all-5.3.0-bin-release.zip
 
 runbroker.sh、 runserver.sh 修改 jvm 内存参数
 
+
+!!重要
+这里的jvm gc内存参数很多，根据jdk不同，有多个分支。一定要把他们全部改了
+
 runbroker.sh 修改：JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m"
 runserver.sh修改：JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
 
