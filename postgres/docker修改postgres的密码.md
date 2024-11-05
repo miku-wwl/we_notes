@@ -7,5 +7,5 @@
 进入容器：docker exec -it ba5 bash
 使用postgres登录：su postgres
 连接数据库：psql -U postgres
-修改postgres用户密码：Alter user postgres with password ‘123456’;
+修改postgres用户密码：Alter user postgres with password 'nixx';
 退出数据库连接：\q
