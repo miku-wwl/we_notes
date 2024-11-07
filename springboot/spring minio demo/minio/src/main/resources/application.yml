@@ -1,0 +1,14 @@
+server:
+  port: 8088
+
+minio:
+  endpoint: http://127.0.0.1:9000
+  bucketName: testbucket
+  accessKey: 1wZk5qSlnC3asfIBJbng
+  secretKey: BUXi60cz98DfKqvmdhVyCU7l90SmnLboQi18aWci
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
