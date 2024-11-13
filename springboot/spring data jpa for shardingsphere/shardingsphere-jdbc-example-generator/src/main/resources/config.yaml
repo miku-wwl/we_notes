@@ -90,8 +90,8 @@ frameworks:
   - spring-boot-starter-jpa
 
 props:
-  host: 101.126.19.236
+  host: 127.0.0.1
   port: 3306
   username: root
-  password: 32110219miku!
+  password: mikumikumi!
 
