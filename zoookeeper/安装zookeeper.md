@@ -13,6 +13,7 @@ vim zoo.cfg
 ./zkServer.sh start-foreground
 
 启动 zookeeper 客户端
+./zkCli.sh -server localhost:2181
 
 dubbo 集成 zookeeper
 
