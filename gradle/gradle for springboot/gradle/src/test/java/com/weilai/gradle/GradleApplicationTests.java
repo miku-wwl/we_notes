@@ -1,10 +1,10 @@
-package com.weilai.test1;
+package com.weilai.gradle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Test1ApplicationTests {
+class GradleApplicationTests {
 
     @Test
     void contextLoads() {
