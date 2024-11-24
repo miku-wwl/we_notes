@@ -1,15 +1,10 @@
-package com.shuijing.boot.mq.manager.mq;
+package com.weilai.rabbitmq.mq;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-/**
- * @author 刘水镜
- * @blog https://liushuijinger.blog.csdn.net
- * @date 2021-10-31
- */
 @Slf4j
 @Component
 public class WorkConsumer {
@@ -24,7 +19,6 @@ public class WorkConsumer {
         }
         log.info("{} 被 receiveOne 消费", message);
     }
-
 
     @RabbitListener(containerFactory = "rabbitListenerContainerFactory", queuesToDeclare = @Queue("work"))
 //    @RabbitListener(queuesToDeclare = @Queue("work"))
