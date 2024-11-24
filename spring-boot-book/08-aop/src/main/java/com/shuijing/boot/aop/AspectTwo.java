@@ -8,6 +8,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * @author 刘水镜
@@ -15,9 +17,9 @@ import org.aspectj.lang.annotation.Pointcut;
  * @date 2021-06-14
  */
 @Slf4j
-//@Order(2)
+@Order(2)
 @Aspect
-//@Component
+@Component
 public class AspectTwo {
 
     @Pointcut("execution(public * com.shuijing.boot.aop.*.*(..))")
