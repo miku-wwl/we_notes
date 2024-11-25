@@ -104,6 +104,17 @@ docker run --name mysql -p 3305:3306 -d -e MYSQL_ROOT_PASSWORD=123456 mysql
 ```
 
 
+### 安装 Postgres
+
+
+
+```bash
+# 拉取镜像
+docker pull postgres
+
+# 运行
+docker run --name postgres -e POSTGRES_PASSWORD=32110219miku! -p 5432:5432 -d postgres
+```
 
 
 
