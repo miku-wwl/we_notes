@@ -197,3 +197,16 @@ set encoding=utf-8
 # 重启 elasticsearch
 docker restart elasticsearch
 ```
+
+#### 安装prometheus
+
+docker run -itd --name=prometheus --restart=always -p 9090:9090 prom/prometheus
+或
+docker run --name prometheus -d -p 9090:9090 prom/prometheus
+
+修改prometheus.yml 可以使用docker cp
+
+docker cp prometheus:/etc/prometheus/prometheus.yml $PWD
+docker cp $PWD/prometheus.yml prometheus:/etc/prometheus/prometheus.yml
+
+docker  run -d --name=grafana  -p 3000:3000  grafana/grafana
