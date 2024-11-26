@@ -21,6 +21,7 @@ public class MapCache {
     @PostConstruct
     public void init() {
         log.info("MapCache init");
+        redisson.getKeys().flushall();
         RMapCache<String, Integer> mapCache = redisson.getMapCache("mapcache");
 
         // with ttl = 10 seconds

@@ -23,6 +23,9 @@ public class ListMultimapCache {
 
     @PostConstruct
     public void init() throws InterruptedException {
+        log.info("redissonClient init");
+        redissonClient.getKeys().flushall();
+
         RListMultimapCache<String, Integer> multimap = redissonClient.getListMultimapCache("ListMultimapCache");
         multimap.put("1", 1);
         multimap.put("1", 2);

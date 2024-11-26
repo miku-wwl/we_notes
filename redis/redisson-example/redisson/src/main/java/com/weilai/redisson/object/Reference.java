@@ -2,69 +2,43 @@ package com.weilai.redisson.object;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RRateLimiter;
-import org.redisson.api.RateIntervalUnit;
-import org.redisson.api.RateType;
+import org.redisson.api.RBucket;
+import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.CountDownLatch;
-
 @Slf4j
 @Service
-public class RateLimiter {
+public class Reference {
 
     @Autowired
     private RedissonClient redisson;
 
-    /**
-     * 初始化速率限制器
-     */
     @PostConstruct
     public void init() {
-        log.info("RateLimiter init");
+        log.info("Reference init");
         redisson.getKeys().flushall();
-        RRateLimiter rateLimiter = redisson.getRateLimiter("myRateLimiter");
+        // 获取或创建一个名为 "myMap" 的 RMap 对象
+        RMap<String, RBucket<String>> data = redisson.getMap("Reference");
 
-        // 设置限流规则：每2秒最多允许1个请求
-        boolean setRateSuccess = rateLimiter.trySetRate(RateType.OVERALL, 1, 2, RateIntervalUnit.SECONDS);
-        if (!setRateSuccess) {
-            log.error("Failed to set rate for the rate limiter.");
-            return;
-        }
+        // 创建一个名为 "myObject" 的 RBucket 对象，并设置其值
+        RBucket<String> myObjectBucket = redisson.getBucket("myObjectBucket");
+        myObjectBucket.set("5");
+        myObjectBucket.set("7"); // 覆盖之前的值
 
-        // 模拟两个请求尝试获取限流许可
-        CountDownLatch latch = new CountDownLatch(2);
+        // 将 RBucket 对象放入 RMap 中
+        data.put("bucket", myObjectBucket);
 
-        // 第一个请求
-        acquirePermit(rateLimiter, latch);
+        // 从 RMap 中获取 RBucket 对象
+        RBucket<String> bucket = data.get("bucket");
 
-        // 第二个请求
-        Thread thread = new Thread(() -> acquirePermit(rateLimiter, latch));
-        thread.start();
-
-        try {
-            // 等待所有请求完成
-            latch.await();
-        } catch (InterruptedException e) {
-            log.error("Latch await interrupted", e);
-        }
-    }
-
-    /**
-     * 尝试获取限流许可
-     *
-     * @param rateLimiter 速率限制器实例
-     * @param latch       计数器锁
-     */
-    private void acquirePermit(RRateLimiter rateLimiter, CountDownLatch latch) {
-        try {
-            // 尝试获取1个许可
-            boolean acquired = rateLimiter.tryAcquire();
-            log.info("acquired:{}", acquired);
-        } finally {
-            latch.countDown();
+        // 输出 RBucket 中的值
+        if (bucket != null) {
+            String value = bucket.get();
+            log.info("Value in the bucket: {}", value);
+        } else {
+            log.warn("Bucket not found in the map.");
         }
     }
 }

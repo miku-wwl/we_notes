@@ -21,6 +21,7 @@ public class ScoredSortedSet {
     @PostConstruct
     public void init() {
         log.info("ScoredSortedSet init");
+        redisson.getKeys().flushall();
         RScoredSortedSet<String> set = redisson.getScoredSortedSet("mySortedSet");
         set.add(10, "1");
         set.add(5, "2");

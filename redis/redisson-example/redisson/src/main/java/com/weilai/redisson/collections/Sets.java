@@ -18,6 +18,7 @@ public class Sets {
     @PostConstruct
     public void init() {
         log.info("Sets init");
+        redisson.getKeys().flushall();
         RSet<String> set = redisson.getSet("sets");
         set.add("1");
         set.add("2");

@@ -22,6 +22,7 @@ public class ListMultimap {
     @PostConstruct
     public void init() {
         log.info("ListMultimap init");
+        redissonClient.getKeys().flushall();
 
         RListMultimap<String, Integer> multimap = redissonClient.getListMultimap("ListMultimap");
         multimap.put("1", 1);

@@ -20,6 +20,8 @@ public class LexSortedSet {
 
     @PostConstruct
     public void init() {
+        log.info("redissonClient init");
+        redissonClient.getKeys().flushall();
         RLexSortedSet set = redissonClient.getLexSortedSet("sortedSet");
         set.add("1");
         set.add("2");

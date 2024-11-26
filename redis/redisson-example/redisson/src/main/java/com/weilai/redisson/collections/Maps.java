@@ -22,7 +22,7 @@ public class Maps {
     @PostConstruct
     public void init() {
         log.info("Maps init");
-
+        redisson.getKeys().flushall();
         RMap<String, Integer> map = redisson.getMap("myMap");
         map.put("a", 1);
         map.put("b", 2);

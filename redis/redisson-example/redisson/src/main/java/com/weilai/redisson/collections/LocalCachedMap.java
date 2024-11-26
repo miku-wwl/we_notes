@@ -27,6 +27,7 @@ public class LocalCachedMap {
     @PostConstruct
     public void init() {
         log.info("LocalCachedMap init");
+        redissonClient.getKeys().flushall();
         // NOTE: Key and Value can be of any type, eg. Object,Integer,Boolean etc.
         final LocalCachedMapOptions<String, Integer> options = LocalCachedMapOptions
                 .<String, Integer>name("myMap")

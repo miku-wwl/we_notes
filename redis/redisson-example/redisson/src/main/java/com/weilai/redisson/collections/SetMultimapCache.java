@@ -23,6 +23,7 @@ public class SetMultimapCache {
     @PostConstruct
     public void init() throws InterruptedException {
         log.info("SetMultimapCache init");
+        redisson.getKeys().flushall();
         RSetMultimapCache<String, Integer> multimap = redisson.getSetMultimapCache("SetMultimapCache");
         multimap.put("1", 1);
         multimap.put("1", 2);

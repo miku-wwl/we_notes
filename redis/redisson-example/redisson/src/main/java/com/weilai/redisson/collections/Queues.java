@@ -19,7 +19,8 @@ public class Queues {
 
     @PostConstruct
     public void init() {
-
+        log.info("Queues init");
+        redisson.getKeys().flushall();
         RQueue<String> queue = redisson.getQueue("myQueue");
         queue.add("1");
         queue.add("2");

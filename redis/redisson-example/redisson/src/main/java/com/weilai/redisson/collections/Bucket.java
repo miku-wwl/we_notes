@@ -18,6 +18,9 @@ public class Bucket {
 
     @PostConstruct
     public void init() throws InterruptedException {
+        log.info("Bucket init");
+        redisson.getKeys().flushall();
+
         RBucket<String> bucket = redisson.getBucket("test");
         bucket.set("123");
 

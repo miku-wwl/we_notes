@@ -21,6 +21,7 @@ public class SetCache {
     @PostConstruct
     public void init() throws InterruptedException {
         log.info("SetCache init");
+        redisson.getKeys().flushall();
         RSetCache<String> setCache = redisson.getSetCache("SetCache");
 
         // with ttl = 20 seconds
