@@ -57,3 +57,14 @@ docker restart prometheus
 
 登录Prometheus 管理平台查看服务状态。
 ![Prometheus](image.png)
+
+下载grafana dashboard
+
+https://grafana.com/grafana/dashboards/  
+
+
+下载
+Node Exporter Full  直接copyid 1860
+
+对linux 进行压力测试
+cat /dev/urandom | gzip -9 > /dev/null
