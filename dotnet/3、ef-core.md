@@ -42,7 +42,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FirstWebApi.Persistency;
 
-public class AppDbContext(DbContextOptions options) : DbContext(options)
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
     public required DbSet<Activity> Activities { get; set; }
 }
@@ -52,7 +52,7 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 ### 五、步骤 4：用“迁移”创建数据库表（EF Core 的核心功能）  
 “迁移”是 EF Core 特有的功能，能**自动将实体类的结构转化为数据库表**，并记录变更历史（类似“数据库版本控制”）。  
 
-#### 执行迁移命令（终端中执行）：  
+#### 执行迁移命令（终端中执行）, 必须在项目根目录执行：  
 1. **添加迁移**：生成“创建 Activities 表”的迁移文件  
    ```bash
    dotnet ef migrations add InitialCreate
@@ -203,7 +203,19 @@ public class DbInitializer
 ```  
 
 
-### 七、步骤 6：在项目中“启用种子数据”（程序启动时调用）  
+### 七、步骤 6：appsettings.json 中配置这个数据库连接字符串, 在项目中“启用种子数据”（程序启动时调用）  
+
+
+```json
+// appsettings.json（新增或修改）
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data source=reactivities.db"
+  },
+  "Logging": { /* 原有配置 */ },
+  "AllowedHosts": "*"
+}
+```
 
 ```csharp
 using FirstWebApi.Persistency;
