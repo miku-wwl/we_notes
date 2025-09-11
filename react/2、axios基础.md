@@ -6,7 +6,7 @@ import axios from 'axios'
 // 定义Todo数据类型
 interface TodoItem {
   id: number;
-  title: string;
+  name: string;
   completed: boolean;
   description?: string;
 }
@@ -57,9 +57,10 @@ function App() {
               border: '1px solid #ddd',
               textDecoration: todo.completed ? 'line-through' : 'none'
             }}>
-              {todo.title}
-              {todo.description && <span style={{ marginLeft: '10px', color: '#666' }}>
-                ({todo.description})
+              {todo.name}
+              {todo.description && 
+              <span style={{ marginLeft: '10px', color: '#666' }}>
+              {todo.description}
               </span>}
             </li>
           ))}
@@ -70,5 +71,6 @@ function App() {
 }
 
 export default App
+
 
 ```
