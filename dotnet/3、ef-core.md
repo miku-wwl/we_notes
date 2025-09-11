@@ -56,6 +56,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 1. **添加迁移**：生成“创建 Activities 表”的迁移文件  
    ```bash
    dotnet ef migrations add InitialCreate
+   dotnet ef migrations add InitialCreate --project ../Persistence --startup-project .
    ```  
 
 2. **更新数据库**：根据迁移文件创建实际的数据库表  
