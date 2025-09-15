@@ -12,6 +12,7 @@ EF Core 是 **.NET 平台的“对象关系映射（ORM）框架”**，它能�
 dotnet tool install --global dotnet-ef 
 
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Design
 
 ### 三、步骤 2：定义“实体类”（对应数据库表的结构）   
 ```csharp
