@@ -1,0 +1,1 @@
+pnpm install @tanstack/react-query @tanstack/react-query-devtools react-router-dom
