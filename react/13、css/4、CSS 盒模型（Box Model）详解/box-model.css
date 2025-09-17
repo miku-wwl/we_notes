@@ -1,0 +1,119 @@
+/* 基础样式设置 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* 通用盒子样式 */
+.box {
+    width: 200px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 1. 基本盒模型结构展示 */
+.basic-box {
+    /* 内容区 */
+    background-color: #e3f2fd; /* 浅蓝色 - 内容区背景 */
+    
+    /* 内边距 */
+    padding: 20px; /* 上下左右各20px内边距 */
+    
+    /* 边框 */
+    border: 5px solid #2196F3; /* 蓝色边框 */
+    
+    /* 外边距 */
+    margin: 30px auto; /* 上下30px，左右自动居中 */
+}
+
+/* 内容区样式 */
+.content {
+    background-color: #bbdefb; /* 更浅的蓝色 - 突出内容区 */
+    padding: 10px;
+}
+
+/* 2. 边框样式演示 */
+.border-demo {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: 20px 0;
+    
+    /* 边框样式：宽度、样式、颜色 */
+    border-width: 3px;
+    border-style: dashed; /* 虚线边框 */
+    border-color: #9c27b0; /* 紫色边框 */
+    
+    /* 也可以单独设置各边边框 */
+    border-top-style: solid;
+    border-left-width: 5px;
+}
+
+/* 3. 内边距效果展示 */
+.padding-demo {
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+    
+    /* 分别设置上下左右内边距 */
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    
+    margin: 20px 0;
+}
+
+/* 4. 外边距效果展示 */
+.margin-container {
+    background-color: #fff3e0;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.margin-demo {
+    background-color: #ffe0b2;
+    border: 2px solid #ff9800;
+    margin: 20px; /* 上下左右各20px外边距 */
+    padding: 10px;
+}
+
+/* 5. 盒模型计算方式对比 */
+.box-sizing-demo {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+/* 默认盒模型：width = 内容区宽度 */
+.content-box {
+    box-sizing: content-box; /* 默认值 */
+    background-color: #d1ecf1;
+    border: 10px solid #17a2b8;
+    padding: 20px;
+    /* 总宽度 = 200px(内容) + 20px*2(内边距) + 10px*2(边框) = 260px */
+}
+
+/* 边框盒模型：width = 内容区 + 内边距 + 边框的总宽度 */
+.border-box {
+    box-sizing: border-box;
+    background-color: #d1ecf1;
+    border: 10px solid #17a2b8;
+    padding: 20px;
+    /* 总宽度 = 200px(包含内容、内边距和边框) */
+}
+
+.box-sizing-demo p {
+    margin-top: 20px;
+    font-style: italic;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS颜色系统与Material UI主题色</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1 style="color: #2d3436; font-size: 2rem;">CSS颜色系统详解</h1>
+        <p style="color: #636e72; font-size: 1.1rem;">色值表示方法与Material UI主题色</p>
+    </header>
+
+    <main>
+        <!-- 色值表示方法 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">1. 色值表示方法</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+                <!-- 关键词表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">关键词表示</h3>
+                    <div style="background-color: red; width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: red;"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">使用预定义的颜色名称，如red、blue、green等</p>
+                </div>
+                
+                <!-- 十六进制表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">十六进制表示</h3>
+                    <div style="background-color: #ff3e3e; width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: #ff3e3e;"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">#RRGGBB格式，范围00-FF，可简写#RGB</p>
+                </div>
+                
+                <!-- RGB表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">RGB表示</h3>
+                    <div style="background-color: rgb(52, 152, 219); width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: rgb(52, 152, 219);"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">red, green, blue三通道，范围0-255</p>
+                </div>
+                
+                <!-- RGBA表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">RGBA表示</h3>
+                    <div style="background-color: rgba(52, 152, 219, 0.5); width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: rgba(52, 152, 219, 0.5);"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">RGB+Alpha透明度，0-1之间</p>
+                </div>
+                
+                <!-- HSL表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">HSL表示</h3>
+                    <div style="background-color: hsl(120, 60%, 50%); width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: hsl(120, 60%, 50%);"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">色相(0-360)、饱和度(0-100%)、亮度(0-100%)</p>
+                </div>
+                
+                <!-- HSLA表示 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 10px;">HSLA表示</h3>
+                    <div style="background-color: hsla(120, 60%, 50%, 0.5); width: 100%; height: 80px; margin-bottom: 10px; border-radius: 4px;"></div>
+                    <p style="font-family: monospace; color: #636e72;">style="background-color: hsla(120, 60%, 50%, 0.5);"</p>
+                    <p style="color: #636e72; font-size: 0.9rem;">HSL+Alpha透明度，0-1之间</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material UI主题色 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">2. Material UI主题色系统</h2>
+            
+            <!-- 主色调 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 15px;">主色调 (Primary)</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <div style="background-color: #1976d2; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">500</div>
+                    <div style="background-color: #0d47a1; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">800</div>
+                    <div style="background-color: #2196f3; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">400</div>
+                    <div style="background-color: #64b5f6; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">300</div>
+                    <div style="background-color: #e3f2fd; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">100</div>
+                </div>
+                <p style="margin-top: 10px; color: #636e72;">主色调用于品牌标识、主要按钮、重要元素强调</p>
+            </div>
+            
+            <!-- 次要色调 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 15px;">次要色调 (Secondary)</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <div style="background-color: #dc004e; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">500</div>
+                    <div style="background-color: #c2185b; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">600</div>
+                    <div style="background-color: #f06292; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">400</div>
+                    <div style="background-color: #f8bbd0; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">200</div>
+                </div>
+                <p style="margin-top: 10px; color: #636e72;">次要色调用于强调与主色调形成对比的元素</p>
+            </div>
+            
+            <!-- 功能色 -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 15px;">功能色</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <div style="background-color: #4caf50; width: 120px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">成功 (Success)</div>
+                    <div style="background-color: #f44336; width: 120px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">错误 (Error)</div>
+                    <div style="background-color: #ff9800; width: 120px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">警告 (Warning)</div>
+                    <div style="background-color: #2196f3; width: 120px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">信息 (Info)</div>
+                </div>
+                <p style="margin-top: 10px; color: #636e72;">功能色用于传达特定状态：成功、错误、警告、信息</p>
+            </div>
+            
+            <!-- 中性色 -->
+            <div>
+                <h3 style="color: #2d3436; font-size: 1.2rem; margin-bottom: 15px;">中性色 (Neutral)</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <div style="background-color: #212121; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">900</div>
+                    <div style="background-color: #424242; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">800</div>
+                    <div style="background-color: #757575; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">600</div>
+                    <div style="background-color: #bdbdbd; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">400</div>
+                    <div style="background-color: #eeeeee; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">200</div>
+                    <div style="background-color: #f5f5f5; width: 80px; height: 80px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">100</div>
+                    <div style="background-color: #ffffff; width: 80px; height: 80px; border: 1px solid #eee; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(0,0,0,0.87); font-weight: bold;">50</div>
+                </div>
+                <p style="margin-top: 10px; color: #636e72;">中性色用于文本、背景、边框等，确保内容可读性</p>
+            </div>
+        </section>
+        
+        <!-- 颜色应用示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">3. 颜色应用示例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 按钮示例 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">按钮样式</h3>
+                    <button style="background-color: #1976d2; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-right: 10px; cursor: pointer;">主按钮</button>
+                    <button style="background-color: #dc004e; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-right: 10px; cursor: pointer;">次要按钮</button>
+                    <button style="background-color: transparent; color: #1976d2; border: 1px solid #1976d2; padding: 8px 16px; border-radius: 4px; cursor: pointer;">文本按钮</button>
+                </div>
+                
+                <!-- 状态提示示例 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">状态提示</h3>
+                    <div style="background-color: #e8f5e9; color: #2e7d32; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+                        <strong>成功：</strong>操作已完成
+                    </div>
+                    <div style="background-color: #ffebee; color: #c62828; padding: 10px; border-radius: 4px;">
+                        <strong>错误：</strong>请检查输入内容
+                    </div>
+                </div>
+                
+                <!-- 文本层次示例 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">文本层次</h3>
+                    <p style="color: #212121; font-size: 1rem; margin-bottom: 5px;">主要文本 - #212121</p>
+                    <p style="color: #616161; font-size: 0.9rem; margin-bottom: 5px;">次要文本 - #616161</p>
+                    <p style="color: #9e9e9e; font-size: 0.85rem;">提示文本 - #9e9e9e</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #636e72;">
+        <p>CSS颜色系统与Material UI主题色演示 © 2023</p>
+    </footer>
+</body>
+</html>
+    

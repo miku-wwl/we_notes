@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 样式应用方式与优先级</title>
+    <!-- 1. 外部样式表 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 2. 内部样式表 -->
+    <style>
+        /* 内部样式 - 元素选择器 */
+        .box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196F3;
+        }
+        
+        /* 内部样式 - ID 选择器 */
+        #content {
+            color: #673AB7;
+            padding: 15px;
+        }
+        
+        /* 内部样式 - 类选择器 */
+        .highlight {
+            font-weight: bold;
+            color: #D32F2F;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 样式应用方式与优先级示例</h1>
+    
+    <!-- 外部样式、内部样式和内联样式对比 -->
+    <div class="box" id="content">
+        这个元素同时受到外部样式和内部样式的影响
+    </div>
+    
+    <!-- 选择器优先级对比 -->
+    <p class="highlight" id="special-text">
+        这个元素展示不同选择器的优先级
+    </p>
+    
+    <!-- 继承与直接应用样式对比 -->
+    <div class="parent">
+        <p>我继承了父元素的一些样式，但也有自己的直接样式</p>
+    </div>
+    
+    <!-- !important 示例 -->
+    <p class="important-demo">
+        这个元素展示 !important 的特殊优先级
+    </p>
+    
+    <!-- 内联样式示例 -->
+    <p style="color: #00796B; font-size: 18px;">
+        我使用了内联样式，优先级很高
+    </p>
+</body>
+</html>

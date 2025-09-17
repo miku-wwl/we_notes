@@ -1,0 +1,155 @@
+/* 基础样式设置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #333;
+    padding-bottom: 2000px; /* 为了演示滚动效果 */
+}
+
+header, footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.demo-section {
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* 1. 正常流样式 */
+.normal-flow-demo {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.block-element {
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.inline-element {
+    background-color: #ffe0b2;
+    border: 1px solid #ff9800;
+    padding: 2px 5px;
+    margin: 0 5px;
+}
+
+/* 2. 浮动样式 */
+.float-demo {
+    background-color: #fff8e1;
+    padding: 20px;
+}
+
+.float-left {
+    float: left;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    padding: 15px;
+    margin: 0 15px 15px 0;
+}
+
+.float-right {
+    float: right;
+    background-color: #fce4ec;
+    border: 1px solid #e91e63;
+    padding: 15px;
+    margin: 0 0 15px 15px;
+}
+
+.small {
+    padding: 5px;
+    margin: 5px;
+}
+
+/* 清除浮动方法 */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.after-clear {
+    margin-top: 10px;
+    background-color: #e0f7fa;
+    padding: 10px;
+}
+
+/* 3. 定位样式 */
+.position-demo {
+    background-color: #f3e5f5;
+    padding: 20px;
+    position: relative; /* 作为绝对定位元素的容器 */
+    height: 400px;
+}
+
+/* 默认定位：static */
+.position-static {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: 10px 0;
+    position: static; /* 默认值，可以省略 */
+}
+
+/* 相对定位：relative */
+.position-relative {
+    background-color: #bbdefb;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    top: 10px; /* 相对于正常位置向下移动10px */
+    left: 20px; /* 相对于正常位置向右移动20px */
+}
+
+/* 绝对定位：absolute */
+.position-absolute {
+    background-color: #ffcdd2;
+    padding: 10px;
+    position: absolute;
+    top: 30px; /* 相对于最近的定位祖先元素 */
+    right: 30px;
+    width: 200px;
+}
+
+/* 固定定位：fixed */
+.position-fixed {
+    background-color: #c8e6c9;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px; /* 相对于视口定位 */
+    right: 30px;
+    width: 200px;
+}
+
+/* 粘性定位：sticky */
+.sticky-container {
+    margin-top: 30px;
+}
+
+.position-sticky {
+    background-color: #fff3e0;
+    padding: 10px;
+    position: sticky;
+    top: 10px; /* 滚动到距离顶部10px时固定 */
+}

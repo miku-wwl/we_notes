@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 盒模型详解</title>
+    <link rel="stylesheet" href="box-model.css">
+</head>
+<body>
+    <h1>CSS 盒模型（Box Model）演示</h1>
+    
+    <!-- 基本盒模型结构展示 -->
+    <div class="box basic-box">
+        <div class="content">内容区 (content)</div>
+    </div>
+    
+    <!-- 不同边框样式展示 -->
+    <div class="box border-demo">
+        不同边框样式演示
+    </div>
+    
+    <!-- 内边距效果展示 -->
+    <div class="box padding-demo">
+        内边距 (padding) 效果演示
+        <p>内边距是内容与边框之间的空间</p>
+    </div>
+    
+    <!-- 外边距效果展示 -->
+    <div class="margin-container">
+        <div class="box margin-demo">外边距 (margin) 演示 1</div>
+        <div class="box margin-demo">外边距 (margin) 演示 2</div>
+        <p>注意两个盒子之间的距离是外边距合并的结果</p>
+    </div>
+    
+    <!-- 盒模型计算方式对比 -->
+    <div class="box-sizing-demo">
+        <div class="box content-box">content-box (默认)</div>
+        <div class="box border-box">border-box</div>
+        <p>两个盒子设置了相同的 width，但显示宽度不同</p>
+    </div>
+</body>
+</html>

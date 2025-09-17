@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS过渡与动画效果</title>
+    <style>
+        /* 动画关键帧需要在style标签中定义，无法完全内联 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes colorChange {
+            0% { background-color: #1976d2; }
+            50% { background-color: #dc004e; }
+            100% { background-color: #1976d2; }
+        }
+    </style>
+</head>
+<body style="font-family: 'Arial', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; line-height: 1.6;">
+    <header style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #ddd;">
+        <h1 style="color: #2d3436; font-size: 2rem;">过渡与动画效果详解</h1>
+        <p style="color: #636e72; font-size: 1.1rem;">transition与animation的应用与区别</p>
+    </header>
+
+    <main>
+        <!-- 基础概念介绍 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">1. 过渡与动画的核心区别</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="padding: 15px; background-color: #e3f2fd; border-radius: 6px;">
+                    <h3 style="color: #1976d2; margin-top: 0;">过渡（transition）</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>需要触发条件（如hover、focus）</li>
+                        <li>从一个状态平滑过渡到另一个状态</li>
+                        <li>语法简单，适合简单的状态变化</li>
+                        <li>不能定义关键帧，只能定义开始和结束状态</li>
+                    </ul>
+                    <p><strong>基本语法：</strong><br>
+                    <code>transition:  property duration timing-function delay;</code></p>
+                </div>
+                
+                <div style="padding: 15px; background-color: #ffebee; border-radius: 6px;">
+                    <h3 style="color: #dc004e; margin-top: 0;">动画（animation）</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>可以自动播放，无需触发条件</li>
+                        <li>通过关键帧（@keyframes）定义多阶段动画</li>
+                        <li>功能更强大，可控制循环、方向等</li>
+                        <li>可以暂停、继续和反向播放</li>
+                    </ul>
+                    <p><strong>基本语法：</strong><br>
+                    <code>animation: name duration timing-function delay iteration-count direction;</code></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 过渡效果示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">2. 过渡（transition）效果示例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 颜色过渡 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">颜色过渡</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #1976d2; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background-color 0.5s ease;"
+                        onmouseover="this.style.backgroundColor='#dc004e'"
+                        onmouseout="this.style.backgroundColor='#1976d2'"
+                    >
+                        悬停改变颜色
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">transition: background-color 0.5s ease;</code>
+                </div>
+                
+                <!-- 尺寸过渡 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">尺寸过渡</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #4caf50; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: width 0.3s ease-out;"
+                        onmouseover="this.style.width='90%'"
+                        onmouseout="this.style.width='100%'"
+                    >
+                        悬停改变宽度
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">transition: width 0.3s ease-out;</code>
+                </div>
+                
+                <!-- 多属性过渡 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">多属性过渡</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #ff9800; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: all 0.4s ease;"
+                        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+                    >
+                        悬停缩放并加阴影
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">transition: all 0.4s ease;</code>
+                </div>
+                
+                <!-- 延迟过渡 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">延迟过渡</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #9c27b0; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: transform 0.3s ease 0.2s;"
+                        onmouseover="this.style.transform='rotate(5deg)'"
+                        onmouseout="this.style.transform='rotate(0)'"
+                    >
+                        悬停延迟旋转
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">transition: transform 0.3s ease 0.2s;</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- 动画效果示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">3. 动画（animation）效果示例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 淡入动画 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">淡入动画</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #1976d2; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; animation: fadeIn 1s ease-out;"
+                    >
+                        页面加载时淡入
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">animation: fadeIn 1s ease-out;</code>
+                </div>
+                
+                <!-- 滑动动画 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">滑动动画</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #4caf50; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; animation: slideIn 0.8s ease-out 0.3s both;"
+                    >
+                        延迟滑动进入
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">animation: slideIn 0.8s ease-out 0.3s both;</code>
+                </div>
+                
+                <!-- 脉冲动画 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">循环脉冲</h3>
+                    <div 
+                        style="width: 100%; height: 100px; background-color: #ff9800; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; animation: pulse 2s infinite ease-in-out;"
+                    >
+                        持续脉冲效果
+                    </div>
+                    <code style="display: block; margin-top: 10px; font-size: 0.9rem;">animation: pulse 2s infinite;</code>
+                </div>
+                
+                <!-- 可控动画 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">可控动画</h3>
+                    <div 
+                        id="controllable"
+                        style="width: 100%; height: 100px; background-color: #9c27b0; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white; animation: rotate 3s linear infinite;"
+                    >
+                        可暂停/继续的旋转
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <button 
+                            style="padding: 5px 10px; background-color: #1976d2; color: white; border: none; border-radius: 4px; cursor: pointer;"
+                            onclick="document.getElementById('controllable').style.animationPlayState = 'paused'"
+                        >
+                            暂停
+                        </button>
+                        <button 
+                            style="padding: 5px 10px; background-color: #4caf50; color: white; border: none; border-radius: 4px; cursor: pointer;"
+                            onclick="document.getElementById('controllable').style.animationPlayState = 'running'"
+                        >
+                            继续
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 综合应用示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">4. 综合应用示例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 交互卡片 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">交互卡片（过渡效果）</h3>
+                    <div 
+                        style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;"
+                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                    >
+                        <div style="height: 120px; background-color: #1976d2; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                            卡片标题
+                        </div>
+                        <div style="padding: 15px;">
+                            <p style="margin: 0; color: #636e72; font-size: 0.95rem;">
+                                悬停时卡片会上浮并增加阴影，使用过渡效果实现平滑动画。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 加载按钮 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">加载按钮（动画+过渡）</h3>
+                    <button 
+                        id="loadingBtn"
+                        style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;"
+                        onclick="this.innerHTML = '<span style=\'display: inline-block; width: 16px; height: 16px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: rotate 1s linear infinite;\'></span> 加载中...'; this.disabled = true; this.style.backgroundColor = '#388e3c';"
+                    >
+                        点击加载
+                    </button>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #636e72;">
+                        点击后按钮状态变化（过渡），同时显示旋转加载动画（animation）
+                    </p>
+                </div>
+                
+                <!-- 状态指示器 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">状态指示器（动画）</h3>
+                    <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center;">
+                        <div style="display: inline-block; width: 20px; height: 20px; border-radius: 50%; background-color: #1976d2; animation: colorChange 2s infinite ease-in-out;"></div>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">
+                            状态指示器，使用颜色变化动画表示活跃状态
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #636e72;">
+        <p>CSS过渡与动画效果演示 © 2023</p>
+    </footer>
+</body>
+</html>
+    

@@ -1,0 +1,56 @@
+/* 1. 外部样式表 - 元素选择器 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+}
+
+/* 外部样式表 - 类选择器 */
+.box {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* 外部样式表 - ID 选择器 */
+#content {
+    font-size: 16px;
+    background-color: #f0f8ff; /* 会被内部样式的背景色覆盖 */
+}
+
+/* 外部样式表 - 元素选择器 */
+p {
+    color: #2E7D32; /* 会被更具体的选择器或内联样式覆盖 */
+}
+
+/* 外部样式表 - 类选择器 */
+.parent {
+    color: #FF9800;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* 外部样式表 - 元素选择器（继承测试） */
+.parent p {
+    /* 这个选择器直接应用于p元素，优先级高于继承 */
+    font-style: italic;
+}
+
+/* 外部样式表 - 类选择器（!important 测试） */
+.important-demo {
+    color: #4CAF50 !important; /* !important 提升优先级 */
+    font-size: 16px;
+}
+
+/* 这个规则会被上面的 !important 规则覆盖 */
+#special-text {
+    color: #2196F3; /* 优先级高于类选择器，但低于内联样式 */
+    font-size: 17px;
+}
+
+/* 元素选择器 + 类选择器组合 */
+p.highlight {
+    color: #9C27B0; /* 比单独的类选择器或元素选择器优先级高 */
+    text-decoration: underline;
+}

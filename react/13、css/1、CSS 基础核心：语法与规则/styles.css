@@ -1,0 +1,59 @@
+/* 这是CSS注释 */
+
+/* 1. 元素选择器：通过HTML元素名选择元素 */
+body {
+    /* 属性: 值; */
+    font-family: Arial, sans-serif;
+    color: #333; /* 文本颜色 */
+    background-color: #f5f5f5; /* 背景颜色 */
+    padding: 20px;
+}
+
+/* 2. 类选择器：通过类名选择元素，以点(.)开头 */
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    border-left: 3px solid #e74c3c;
+    padding-left: 10px;
+}
+
+/* 3. ID选择器：通过ID选择元素，以井号(#)开头 */
+#special-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* 4. 后代选择器：选择特定元素内的子元素 */
+#special-section p {
+    font-style: italic;
+}
+
+/* 5. 组合选择器：同时选择多个元素 */
+h1, h2, h3 {
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* 6. 伪类选择器：选择处于特定状态的元素 */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 7. 元素选择器示例 */
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+
+li {
+    margin: 5px 0;
+}

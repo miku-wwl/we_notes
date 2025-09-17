@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内联CSS文本样式演示</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; color: #333;">
+    <header style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+        <h1 style="color: #2c3e50; font-size: 2.2rem; margin-bottom: 10px;">内联CSS文本样式详解</h1>
+        <p style="color: #666; font-size: 1.1rem;">字体、大小、行高与对齐的直观展示</p>
+    </header>
+
+    <main>
+        <!-- 字体家族示例 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">1. 字体家族 (font-family)</h2>
+            <p style="font-family: Arial, Helvetica, sans-serif; margin-bottom: 15px;">无衬线字体 (Sans-serif)：Arial, Helvetica</p>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 15px;">衬线字体 (Serif)：Georgia, Times New Roman</p>
+            <p style="font-family: 'Courier New', Courier, monospace; margin-bottom: 15px;">等宽字体 (Monospace)：Courier New, Monaco</p>
+            <p style="font-family: 'Brush Script MT', cursive; font-size: 1.5rem; margin-bottom: 15px;">手写体 (Cursive)：Brush Script MT</p>
+        </section>
+
+        <!-- 字体大小示例 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">2. 字体大小 (font-size)</h2>
+            <p style="font-size: 12px; margin-bottom: 10px;">超小文本 (12px)</p>
+            <p style="font-size: 14px; margin-bottom: 10px;">小文本 (14px)</p>
+            <p style="font-size: 16px; margin-bottom: 10px;">基础文本 (16px - 默认)</p>
+            <p style="font-size: 18px; margin-bottom: 10px;">大文本 (18px)</p>
+            <p style="font-size: 24px; margin-bottom: 10px;">超大文本 (24px)</p>
+            <p style="font-size: 32px; margin-bottom: 10px;">特大文本 (32px)</p>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">相对单位文本 (1.2rem)</p>
+        </section>
+
+        <!-- 字体样式与粗细 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">3. 字体样式与粗细</h2>
+            <p style="font-weight: normal; margin-bottom: 10px;">正常粗细 (font-weight: normal)</p>
+            <p style="font-weight: bold; margin-bottom: 10px;">粗体文本 (font-weight: bold)</p>
+            <p style="font-weight: 300; margin-bottom: 10px;">轻量文本 (font-weight: 300)</p>
+            <p style="font-style: italic; margin-bottom: 10px;">斜体文本 (font-style: italic)</p>
+            <p style="font-style: oblique; margin-bottom: 10px;">倾斜文本 (font-style: oblique)</p>
+            <p style="text-transform: uppercase; margin-bottom: 10px;">uppercase (全部大写)</p>
+            <p style="text-transform: lowercase; margin-bottom: 10px;">LOWERCASE (全部小写)</p>
+            <p style="text-transform: capitalize; margin-bottom: 10px;">capitalize each word (首字母大写)</p>
+        </section>
+
+        <!-- 行高与字间距 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">4. 行高与字间距</h2>
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                <p style="line-height: 1.2; margin-bottom: 15px;">紧凑行高 (line-height: 1.2) - 这段文本用于演示较紧凑的行高效果，适合标题等短文本展示。</p>
+                <p style="line-height: 1.6; margin-bottom: 15px;">正常行高 (line-height: 1.6) - 这段文本用于演示正常的行高效果，适合大多数正文内容，提供良好的可读性。</p>
+                <p style="line-height: 2.0; margin-bottom: 15px;">宽松行高 (line-height: 2.0) - 这段文本用于演示宽松的行高效果，适合长段落阅读，减少视觉疲劳。</p>
+            </div>
+            
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                <p style="letter-spacing: -0.5px; margin-bottom: 10px;">字间距紧凑 (letter-spacing: -0.5px)</p>
+                <p style="letter-spacing: 0; margin-bottom: 10px;">正常字间距 (letter-spacing: 0)</p>
+                <p style="letter-spacing: 2px; margin-bottom: 10px;">字间距宽松 (letter-spacing: 2px)</p>
+                <p style="word-spacing: 8px; margin-bottom: 10px;">词间距宽松 (word-spacing: 8px) - this demonstrates wide word spacing</p>
+            </div>
+        </section>
+
+        <!-- 文本对齐 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">5. 文本对齐 (text-align)</h2>
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                <p style="text-align: left; margin-bottom: 15px;">左对齐文本 (text-align: left) - 这是默认的文本对齐方式，适合大多数语言的阅读习惯。</p>
+                <p style="text-align: center; margin-bottom: 15px;">居中对齐文本 (text-align: center) - 常用于标题和强调内容，使文本在容器中水平居中。</p>
+                <p style="text-align: right; margin-bottom: 15px;">右对齐文本 (text-align: right) - 常用于日期、金额等需要靠右显示的内容。</p>
+                <p style="text-align: justify; margin-bottom: 15px;">两端对齐文本 (text-align: justify) - 使文本左右两端都对齐，常用于报纸和书籍排版，使页面看起来更整齐。这种对齐方式会自动调整单词间距，使每行的长度相等（最后一行除外）。</p>
+            </div>
+        </section>
+
+        <!-- 文本装饰与效果 -->
+        <section style="background-color: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0;">6. 文本装饰与效果</h2>
+            <p style="text-decoration: underline; margin-bottom: 10px;">下划线文本 (text-decoration: underline)</p>
+            <p style="text-decoration: overline; margin-bottom: 10px;">上划线文本 (text-decoration: overline)</p>
+            <p style="text-decoration: line-through; margin-bottom: 10px;">删除线文本 (text-decoration: line-through)</p>
+            <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-size: 1.5rem; color: #3498db; margin-bottom: 10px;">带阴影的文本 (text-shadow)</p>
+            <p style="text-indent: 2em; margin-bottom: 10px;">首行缩进文本 (text-indent: 2em) - 这段文本展示了首行缩进效果，常用于段落开头，符合中文排版习惯。</p>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #eee; color: #666;">
+        <p>内联CSS文本样式演示 © 2023</p>
+    </footer>
+</body>
+</html>
+    

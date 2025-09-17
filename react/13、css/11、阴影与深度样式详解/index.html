@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS阴影与深度效果</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; line-height: 1.6;">
+    <header style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #ddd;">
+        <h1 style="color: #2d3436; font-size: 2rem;">阴影与深度效果详解</h1>
+        <p style="color: #636e72; font-size: 1.1rem;">Material UI组件阴影层级与应用</p>
+    </header>
+
+    <main>
+        <!-- 阴影基础样式 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">1. 阴影基础 (box-shadow)</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 15px;"><strong>基本语法：</strong> <code>box-shadow: 水平偏移 垂直偏移 模糊半径 扩散半径 颜色 inset;</code></p>
+                <ul style="margin-bottom: 15px; padding-left: 20px;">
+                    <li>水平偏移：必需，正数向右，负数向左</li>
+                    <li>垂直偏移：必需，正数向下，负数向上</li>
+                    <li>模糊半径：可选，值越大阴影越模糊</li>
+                    <li>扩散半径：可选，正数扩大阴影，负数缩小</li>
+                    <li>颜色：可选，默认与文本颜色相同</li>
+                    <li>inset：可选，设置为内阴影</li>
+                </ul>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 基本阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">基本阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                        <code>2px 2px 4px rgba(0,0,0,0.3)</code>
+                    </div>
+                </div>
+                
+                <!-- 模糊阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">模糊阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                        <code>0 4px 12px rgba(0,0,0,0.2)</code>
+                    </div>
+                </div>
+                
+                <!-- 扩散阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">扩散阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px 3px rgba(0,0,0,0.15);">
+                        <code>0 2px 8px 3px rgba(0,0,0,0.15)</code>
+                    </div>
+                </div>
+                
+                <!-- 内阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">内阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);">
+                        <code>inset 0 2px 6px rgba(0,0,0,0.2)</code>
+                    </div>
+                </div>
+                
+                <!-- 多重阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">多重阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.1);">
+                        <code>多重阴影组合</code>
+                    </div>
+                </div>
+                
+                <!-- 彩色阴影 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 10px;">彩色阴影</h3>
+                    <div style="width: 100%; height: 100px; background-color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);">
+                        <code>蓝色系阴影</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material UI阴影层级 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">2. Material UI阴影层级</h2>
+            
+            <p style="margin-bottom: 20px;">Material UI定义了12个阴影层级（0-11），数值越大表示元素层级越高，阴影越明显：</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px;">
+                <!-- 阴影层级 0 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 0</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: none; display: flex; align-items: center; justify-content: center;">
+                        无阴影
+                    </div>
+                </div>
+                
+                <!-- 阴影层级 1 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 1</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); display: flex; align-items: center; justify-content: center;">
+                        轻微阴影
+                    </div>
+                </div>
+                
+                <!-- 阴影层级 2 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 2</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); display: flex; align-items: center; justify-content: center;">
+                        基础阴影
+                    </div>
+                </div>
+                
+                <!-- 阴影层级 3 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 3</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10); display: flex; align-items: center; justify-content: center;">
+                        中等阴影
+                    </div>
+                </div>
+                
+                <!-- 阴影层级 4 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 4</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: 0 15px 25px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center;">
+                        突出阴影
+                    </div>
+                </div>
+                
+                <!-- 阴影层级 5 -->
+                <div>
+                    <div style="text-align: center; margin-bottom: 8px; font-weight: bold;">层级 5</div>
+                    <div style="width: 100%; height: 80px; background-color: white; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;">
+                        强烈阴影
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 15px; background-color: #f5f5f5; border-radius: 6px;">
+                <h3 style="margin-top: 0; color: #2d3436; margin-bottom: 10px;">阴影层级应用场景</h3>
+                <ul style="padding-left: 20px;">
+                    <li>层级 0-1：用于平面元素、卡片默认状态</li>
+                    <li>层级 2-3：用于悬浮状态、下拉菜单</li>
+                    <li>层级 4-5：用于对话框、模态框、抽屉组件</li>
+                    <li>层级随元素"高度"增加而增大，体现真实世界的光照效果</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 阴影应用示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">3. 阴影深度应用示例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 卡片组件 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">卡片组件</h3>
+                    <div style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);">
+                        <div style="height: 150px; background-image: url('https://picsum.photos/id/180/600/400'); background-size: cover; background-position: center;"></div>
+                        <div style="padding: 15px;">
+                            <h4 style="margin-top: 0; margin-bottom: 8px; color: #2d3436;">内容卡片</h4>
+                            <p style="margin: 0; color: #636e72; font-size: 0.9rem;">使用层级2阴影的卡片组件，适合展示主要内容。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 交互元素 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">交互元素</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button style="padding: 10px 15px; background-color: #1976d2; color: white; border: none; border-radius: 4px; text-align: left; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); transition: box-shadow 0.3s ease;">
+                            默认状态（层级1）
+                        </button>
+                        <button style="padding: 10px 15px; background-color: #1976d2; color: white; border: none; border-radius: 4px; text-align: left; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10);">
+                            悬浮/点击状态（层级3）
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 模态框效果 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">模态框效果</h3>
+                    <div style="position: relative; height: 200px; background-color: #f0f0f0; border-radius: 8px; overflow: hidden;">
+                        <!-- 背景遮罩 -->
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+                        <!-- 模态框 -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; background-color: white; padding: 15px; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); text-align: center;">
+                            <p style="margin: 0; font-weight: bold;">模态对话框</p>
+                            <p style="font-size: 0.9rem; color: #636e72;">使用层级5阴影，最高层级</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 深度层次示例 -->
+            <div style="margin-top: 30px;">
+                <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">元素深度层次</h3>
+                <div style="position: relative; height: 200px; background-color: #f5f5f5; border-radius: 8px; padding: 20px;">
+                    <!-- 底层元素 -->
+                    <div style="position: absolute; top: 40px; left: 40px; width: 200px; height: 120px; background-color: white; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);"></div>
+                    <!-- 中层元素 -->
+                    <div style="position: absolute; top: 20px; left: 120px; width: 200px; height: 120px; background-color: white; border-radius: 4px; box-shadow: 0 3px 6px rgba(0,0,0,0.15);"></div>
+                    <!-- 顶层元素 -->
+                    <div style="position: absolute; top: 0; left: 200px; width: 200px; height: 120px; background-color: white; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"></div>
+                    <div style="position: absolute; bottom: 10px; right: 10px; color: #636e72; font-size: 0.9rem;">
+                        阴影越明显，元素层级越高
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #636e72;">
+        <p>CSS阴影与深度效果演示 © 2023</p>
+    </footer>
+</body>
+</html>
+    

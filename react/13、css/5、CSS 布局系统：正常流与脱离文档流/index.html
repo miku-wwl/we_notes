@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 布局系统：正常流与脱离文档流</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <header>
+        <h1>CSS 布局系统演示</h1>
+    </header>
+
+    <main>
+        <!-- 1. 正常流布局示例 -->
+        <section class="demo-section">
+            <h2>1. 正常流（Normal Flow）</h2>
+            <p>块级元素垂直排列，行内元素水平排列</p>
+            
+            <div class="normal-flow-demo">
+                <div class="block-element">块级元素 1</div>
+                <div class="block-element">块级元素 2</div>
+                <p>这是一个段落，包含<span class="inline-element">行内元素 1</span>和<span class="inline-element">行内元素 2</span></p>
+                <div class="block-element">块级元素 3</div>
+            </div>
+        </section>
+
+        <!-- 2. 浮动布局示例 -->
+        <section class="demo-section">
+            <h2>2. 浮动（Float）</h2>
+            <p>元素脱离正常流，向左或向右浮动</p>
+            
+            <div class="float-demo">
+                <div class="float-left">左浮动元素</div>
+                <p>这段文字会围绕浮动元素排列。浮动元素脱离了正常流，但仍然会影响其他元素的布局，特别是文本内容会环绕浮动元素。</p>
+                <div class="float-right">右浮动元素</div>
+                <p>即使在后面的内容也会受到前面浮动元素的影响。</p>
+                
+                <!-- 清除浮动示例 -->
+                <div class="clearfix">
+                    <div class="float-left small">左浮动</div>
+                    <div class="float-right small">右浮动</div>
+                </div>
+                <p class="after-clear">这段文字不受前面浮动元素的影响，因为前面使用了清除浮动技术。</p>
+            </div>
+        </section>
+
+        <!-- 3. 定位布局示例 -->
+        <section class="demo-section position-demo">
+            <h2>3. 定位（Positioning）</h2>
+            
+            <div class="position-static">static（默认定位）- 正常流中的元素</div>
+            
+            <div class="position-relative">
+                relative（相对定位）- 相对于自身正常位置偏移
+                <div class="position-absolute">absolute（绝对定位）- 相对于最近的定位祖先元素定位</div>
+            </div>
+            
+            <div class="position-fixed">fixed（固定定位）- 相对于视口定位，滚动时位置不变</div>
+            
+            <div class="sticky-container">
+                <div class="position-sticky">sticky（粘性定位）- 滚动到一定位置时固定</div>
+                <p>滚动页面查看粘性定位效果...</p>
+                <p>更多内容...</p>
+                <p>更多内容...</p>
+                <p>更多内容...</p>
+                <p>更多内容...</p>
+                <p>更多内容...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>布局系统演示 © 2023</p>
+    </footer>
+</body>
+</html>

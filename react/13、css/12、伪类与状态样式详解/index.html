@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS伪类与状态样式</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; line-height: 1.6;">
+    <header style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #ddd;">
+        <h1 style="color: #2d3436; font-size: 2rem;">伪类与状态样式详解</h1>
+        <p style="color: #636e72; font-size: 1.1rem;">:hover、:active等伪类及Material UI组件状态</p>
+    </header>
+
+    <main>
+        <!-- 伪类基础介绍 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">1. 常用状态伪类</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 15px;">伪类用于定义元素在特定状态下的样式，常用状态伪类包括：</p>
+                <ul style="margin-bottom: 15px; padding-left: 20px;">
+                    <li><code>:hover</code> - 鼠标悬停在元素上时</li>
+                    <li><code>:active</code> - 元素被激活（如点击时）</li>
+                    <li><code>:focus</code> - 元素获得焦点时（如输入框）</li>
+                    <li><code>:disabled</code> - 元素被禁用时</li>
+                    <li><code>:visited</code> - 链接被访问后</li>
+                </ul>
+                <p style="color: #636e72; font-style: italic;">注：内联样式无法直接使用伪类，以下示例通过JavaScript事件模拟伪类效果</p>
+            </div>
+        </section>
+
+        <!-- 按钮状态示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">2. 按钮状态样式</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 主要按钮状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">主要按钮</h3>
+                    <button 
+                        id="primaryBtn"
+                        style="padding: 10px 20px; font-size: 1rem; border: none; border-radius: 4px; cursor: pointer; background-color: #1976d2; color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.2s ease;"
+                        onmouseover="this.style.backgroundColor='#1565c0'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.25)'"
+                        onmouseout="this.style.backgroundColor='#1976d2'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)'"
+                        onmousedown="this.style.backgroundColor='#0d47a1'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.2)'"
+                        onmouseup="this.style.backgroundColor='#1565c0'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.25)'"
+                    >
+                        主要操作按钮
+                    </button>
+                    <div style="margin-top: 15px; padding: 10px; background-color: #f5f5f5; border-radius: 4px;">
+                        <p style="margin: 0 0 5px 0; font-weight: bold;">状态变化：</p>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem;">
+                            <li>默认：蓝色背景，轻微阴影</li>
+                            <li>悬停：深色背景，增强阴影</li>
+                            <li>点击：更深色背景，收缩阴影</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 次要按钮状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">次要按钮</h3>
+                    <button 
+                        style="padding: 10px 20px; font-size: 1rem; border: 1px solid #1976d2; border-radius: 4px; cursor: pointer; background-color: transparent; color: #1976d2; transition: all 0.2s ease;"
+                        onmouseover="this.style.backgroundColor='#e3f2fd'"
+                        onmouseout="this.style.backgroundColor='transparent'"
+                        onmousedown="this.style.backgroundColor='#bbdefb'"
+                        onmouseup="this.style.backgroundColor='#e3f2fd'"
+                    >
+                        次要操作按钮
+                    </button>
+                </div>
+                
+                <!-- 禁用按钮状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">禁用按钮</h3>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <button 
+                            disabled
+                            style="padding: 10px 20px; font-size: 1rem; border: none; border-radius: 4px; background-color: #bdbdbd; color: #757575; cursor: not-allowed;"
+                        >
+                            已禁用按钮
+                        </button>
+                        <button 
+                            id="toggleBtn"
+                            style="padding: 6px 12px; font-size: 0.9rem; border: none; border-radius: 4px; background-color: #4caf50; color: white; cursor: pointer;"
+                            onclick="document.getElementById('disableDemo').disabled = !document.getElementById('disableDemo').disabled"
+                        >
+                            切换禁用状态
+                        </button>
+                    </div>
+                    <button 
+                        id="disableDemo"
+                        style="padding: 10px 20px; margin-top: 10px; font-size: 1rem; border: none; border-radius: 4px; background-color: #1976d2; color: white; cursor: pointer;"
+                    >
+                        可切换禁用状态
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 表单元素状态 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">3. 表单元素状态</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <!-- 输入框状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">输入框状态</h3>
+                    <input 
+                        type="text" 
+                        placeholder="点击获取焦点"
+                        style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #bdbdbd; border-radius: 4px; transition: all 0.2s ease;"
+                        onfocus="this.style.borderColor='#1976d2'; this.style.boxShadow='0 0 0 3px rgba(25, 118, 210, 0.2)'"
+                        onblur="this.style.borderColor='#bdbdbd'; this.style.boxShadow='none'"
+                    >
+                    <div style="margin-top: 10px;">
+                        <input 
+                            type="text" 
+                            value="禁用状态"
+                            disabled
+                            style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #e0e0e0; border-radius: 4px; background-color: #f5f5f5; color: #9e9e9e;"
+                        >
+                    </div>
+                </div>
+                
+                <!-- 复选框状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">复选框状态</h3>
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox1"
+                            style="width: 18px; height: 18px; margin-right: 8px; cursor: pointer;"
+                        >
+                        <label for="checkbox1" style="cursor: pointer;">未选中状态</label>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox2"
+                            checked
+                            style="width: 18px; height: 18px; margin-right: 8px; cursor: pointer;"
+                        >
+                        <label for="checkbox2" style="cursor: pointer;">已选中状态</label>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <input 
+                            type="checkbox" 
+                            id="checkbox3"
+                            disabled
+                            style="width: 18px; height: 18px; margin-right: 8px;"
+                        >
+                        <label for="checkbox3" style="color: #9e9e9e;">禁用状态</label>
+                    </div>
+                </div>
+                
+                <!-- 链接状态 -->
+                <div>
+                    <h3 style="color: #2d3436; font-size: 1.1rem; margin-bottom: 15px;">链接状态</h3>
+                    <p>
+                        <a 
+                            href="#" 
+                            style="color: #1976d2; text-decoration: none; transition: all 0.2s ease;"
+                            onmouseover="this.style.textDecoration='underline'"
+                            onmouseout="this.style.textDecoration='none'"
+                            onclick="event.preventDefault(); alert('模拟链接点击')"
+                        >
+                            普通链接（悬停查看效果）
+                        </a>
+                    </p>
+                    <p>
+                        <a 
+                            href="#" 
+                            style="color: #7b1fa2; text-decoration: none;"
+                            onclick="event.preventDefault()"
+                        >
+                            已访问链接样式
+                        </a>
+                    </p>
+                    <p>
+                        <a 
+                            href="#" 
+                            style="color: #9e9e9e; pointer-events: none; text-decoration: none;"
+                        >
+                            禁用链接（无法点击）
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material UI状态对应表 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">4. Material UI组件状态对应表</h2>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <thead>
+                        <tr style="background-color: #f5f5f5;">
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #eee;">组件</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #eee;">状态</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #eee;">CSS伪类</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #eee;">视觉变化</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: bold;">按钮 (Button)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">默认</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">-</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">基础背景色，轻微阴影</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;"></td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">悬停</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">:hover</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">深色背景，增强阴影</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;"></td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">激活</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">:active</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">更深色背景，收缩阴影</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;"></td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">禁用</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">:disabled</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">灰色背景，降低不透明度</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: bold;">输入框 (TextField)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">默认</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">-</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">灰色边框</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;"></td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">聚焦</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">:focus</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">主题色边框，发光效果</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;"></td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">错误</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">-</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">红色边框，错误提示</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 综合应用示例 -->
+        <section style="background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h2 style="color: #2d3436; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">5. 综合应用示例</h2>
+            
+            <div style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
+                <div style="padding: 15px; background-color: #f5f5f5; border-bottom: 1px solid #eee;">
+                    <h3 style="margin: 0; color: #2d3436;">交互式卡片组件</h3>
+                </div>
+                <div style="padding: 20px;">
+                    <div 
+                        style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; transition: all 0.3s ease; cursor: pointer;"
+                        onmouseover="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)'"
+                        onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'"
+                        onmousedown="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'; this.style.transform='translateY(0)'"
+                        onmouseup="this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)'"
+                    >
+                        <h4 style="margin-top: 0; color: #2d3436;">可点击卡片</h4>
+                        <p style="color: #636e72; margin-bottom: 15px;">这是一个具有完整状态反馈的卡片组件，悬停时有提升效果，点击时有按压反馈。</p>
+                        <button 
+                            style="padding: 8px 16px; border: none; border-radius: 4px; background-color: #1976d2; color: white; cursor: pointer; transition: background-color 0.2s ease;"
+                            onmouseover="this.style.backgroundColor='#1565c0'"
+                            onmouseout="this.style.backgroundColor='#1976d2'"
+                            onmousedown="this.style.backgroundColor='#0d47a1'"
+                            onmouseup="this.style.backgroundColor='#1565c0'"
+                            onclick="alert('卡片内按钮被点击')"
+                        >
+                            卡片内按钮
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #636e72;">
+        <p>CSS伪类与状态样式演示 © 2023</p>
+    </footer>
+
+    <script>
+        // 模拟已访问链接样式
+        document.querySelectorAll('a')[1].style.color = '#7b1fa2';
+        document.querySelectorAll('a')[1].style.textDecoration = 'line-through';
+        
+        // 处理禁用状态切换
+        document.getElementById('disableDemo').addEventListener('disabled', function(e) {
+            if (this.disabled) {
+                this.style.backgroundColor = '#bdbdbd';
+                this.style.color = '#757575';
+                this.style.cursor = 'not-allowed';
+            } else {
+                this.style.backgroundColor = '#1976d2';
+                this.style.color = 'white';
+                this.style.cursor = 'pointer';
+            }
+        });
+    </script>
+</body>
+</html>
+    

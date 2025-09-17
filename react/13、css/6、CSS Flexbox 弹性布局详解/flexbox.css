@@ -1,0 +1,236 @@
+/* 基础样式设置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+}
+
+header, footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.demo-section {
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Flex容器基础样式 */
+.flex-container {
+    background-color: #f0f4f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    min-height: 100px; /* 为了更好地展示对齐效果 */
+}
+
+/* Flex项目基础样式 */
+.flex-item {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* 1. 基本Flex容器 */
+.basic-flex {
+    display: flex; /* 创建Flex容器 */
+}
+
+/* 2. 主轴对齐方式 (justify-content) */
+.justify-start {
+    display: flex;
+    justify-content: flex-start; /* 默认值，左对齐 */
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center; /* 居中对齐 */
+}
+
+.justify-end {
+    display: flex;
+    justify-content: flex-end; /* 右对齐 */
+}
+
+.justify-space-between {
+    display: flex;
+    justify-content: space-between; /* 两端对齐，项目之间间隔相等 */
+}
+
+.justify-space-around {
+    display: flex;
+    justify-content: space-around; /* 每个项目两侧的间隔相等 */
+}
+
+/* 3. 交叉轴对齐方式 (align-items) */
+.align-stretch {
+    display: flex;
+    align-items: stretch; /* 默认值，项目拉伸填满容器 */
+}
+
+.align-center {
+    display: flex;
+    align-items: center; /* 项目在交叉轴居中 */
+}
+
+.align-flex-start {
+    display: flex;
+    align-items: flex-start; /* 项目在交叉轴起点对齐 */
+}
+
+.align-flex-end {
+    display: flex;
+    align-items: flex-end; /* 项目在交叉轴终点对齐 */
+}
+
+/* 4. 方向控制 (flex-direction) */
+.row {
+    display: flex;
+    flex-direction: row; /* 默认值，水平方向，从左到右 */
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse; /* 水平方向，从右到左 */
+}
+
+.column {
+    display: flex;
+    flex-direction: column; /* 垂直方向，从上到下 */
+}
+
+.column-reverse {
+    display: flex;
+    flex-direction: column-reverse; /* 垂直方向，从下到上 */
+}
+
+/* 5. 换行控制 (flex-wrap) */
+.flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap; /* 默认值，不换行 */
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap; /* 换行，第一行在上方 */
+}
+
+/* 6. Flex项目属性 */
+.item-properties {
+    display: flex;
+}
+
+/* 项目的扩展比例 */
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
+
+/* 项目的收缩比例 */
+.shrink-0 {
+    flex-shrink: 0;
+    width: 200px; /* 固定宽度，不收缩 */
+}
+
+.shrink-1 {
+    flex-shrink: 1;
+    width: 200px; /* 固定宽度，但可收缩 */
+}
+
+/* 项目的排列顺序 */
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+/* 7. 实际应用示例 */
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* 卡片布局 */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 项目之间的间距 */
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 250px; /* 不扩展，不收缩，基础宽度250px */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
