@@ -8,8 +8,6 @@ const Register: React.FC = () => {
   // 表单数据（初始值符合 RegisterFormData 类型）
   const [formData, setFormData] = useState<RegisterFormData>({
     email: '',
-    userName: '',
-    nickName: '',
     password: '',
     confirmPassword: '',
   });
@@ -45,17 +43,36 @@ const Register: React.FC = () => {
 
     try {
       await register(formData); // 调用注册接口（类型匹配）
-      setSuccess('注册成功！请查收邮箱验证邮件后登录～');
+      setSuccess('注册成功！请查收邮箱验证邮件后登录(邮箱验证功能待实现)～');
       // 3秒后跳转登录页
       setTimeout(() => navigate('/login'), 3000);
     } catch (err) {
       const error = err as AxiosError<ApiError>;
-      // 提取后端错误信息
-      setError(
-        error.response?.data.message ||
-          error.response?.data.title ||
-          '注册失败，请稍后重试！'
-      );
+      let errorMsg = '注册失败，请稍后重试！';
+
+      if (error.response?.data.errors) {
+        // 遍历 errors 对象，收集所有错误信息
+        const errorsObj = error.response.data.errors;
+        const errorMessages: string[] = [];
+        for (const errorType in errorsObj) {
+          if (Object.prototype.hasOwnProperty.call(errorsObj, errorType)) {
+            // 每个错误类型（如DuplicateUserName）对应的所有提示，都加入数组
+            errorsObj[errorType].forEach(msg => {
+              errorMessages.push(msg);
+            });
+          }
+        }
+        // 拼接所有错误信息（用分号或换行分隔）
+        errorMsg = errorMessages.join('; ');
+      } else if (error.response?.data.message) {
+        // 有 message 则用 message
+        errorMsg = error.response.data.message;
+      } else if (error.response?.data.title) {
+        // 最后 fallback 到 title
+        errorMsg = error.response.data.title;
+      }
+
+      setError(errorMsg);
     } finally {
       setIsSubmitting(false);
     }
@@ -80,33 +97,6 @@ const Register: React.FC = () => {
                 onChange={handleChange}
                 className="form-control"
                 required
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* 用户名 */}
-            <div className="mb-3">
-              <label className="form-label">用户名</label>
-              <input
-                type="text"
-                name="userName"
-                value={formData.userName}
-                onChange={handleChange}
-                className="form-control"
-                placeholder="可选，默认用邮箱"
-                disabled={isSubmitting}
-              />
-            </div>
-
-            {/* 昵称 */}
-            <div className="mb-3">
-              <label className="form-label">昵称</label>
-              <input
-                type="text"
-                name="nickName"
-                value={formData.nickName}
-                onChange={handleChange}
-                className="form-control"
                 disabled={isSubmitting}
               />
             </div>

@@ -45,5 +45,6 @@ export interface LoginResponse {
 export interface ApiError {
   title?: string;
   message?: string;
+  errors?: Record<string, string[]>; // 键为错误类型（如DuplicateUserName），值为错误信息数组
   status?: number;
 }
