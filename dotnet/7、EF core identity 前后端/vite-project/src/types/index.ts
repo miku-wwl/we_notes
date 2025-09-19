@@ -34,11 +34,13 @@ export interface ApiResponse<T> {
 }
 
 // 5. 登录响应（后端返回 accessToken）
+// 定义“登录成功后，后端返回的 Token 等数据结构”
 export interface LoginResponse {
-  data: LoginResponse;
-  accessToken: string;
-  expiresIn?: number; // Token 过期时间（可选）
-  user?: Partial<AppUser>; // 可选：返回部分用户信息
+  accessToken: string;       // 后端返回的 accessToken
+  tokenType?: string;        // 可选：token 类型（如 Bearer）
+  expiresIn?: number;        // 可选：Token 过期时间（秒）
+  refreshToken?: string;     // 可选：刷新 Token（如果有）
+  user?: Partial<AppUser>;   // 可选：用户信息（如果后端返回）
 }
 
 // 6. 错误响应类型

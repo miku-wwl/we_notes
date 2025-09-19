@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { login } from '../api/identityApi';
 import { setToken, isLoggedIn } from '../utils/tokenUtils';
-import type { ApiError, LoginFormData, LoginResponse } from '../types';
+import type { ApiResponse, LoginFormData, LoginResponse } from '../types';
 import type { AxiosError } from 'axios';
 
 const Login: React.FC = () => {
@@ -42,22 +42,24 @@ const Login: React.FC = () => {
     setError('');
 
     try {
-      const res = await login(formData); // 响应类型：ApiResponse<LoginResponse>
-      const loginData: LoginResponse = res.data.data; // 提取 Token 数据
-      
-      // 存储 Token（类型：string）
-      if (loginData.accessToken) {
-        setToken(loginData.accessToken);
+      // 调用登录接口，返回的是 ApiResponse<LoginResponse> 类型
+      const apiResponse: LoginResponse = await login(formData);
+      console.log('登录成功，返回数据：', apiResponse);
+
+      // 验证 Token 是否存在
+      if (apiResponse.accessToken) {
+        setToken(apiResponse.accessToken); // 存储 Token
         navigate(fromPath, { replace: true }); // 跳转来源页
       } else {
         setError('登录失败：未获取到认证 Token！');
       }
     } catch (err) {
-      const error = err as AxiosError<ApiError>;
+      // 捕获 HTTP 错误（如 401/500 等状态码）
+      const error = err as AxiosError<ApiResponse<unknown>>;
+      // 优先取后端返回的错误信息，否则用默认提示
       setError(
-        error.response?.data.message ||
-          error.response?.data.title ||
-          '登录失败：邮箱未验证或账号密码错误！'
+        error.response?.data?.message ||
+        '登录失败：网络错误或服务器异常！'
       );
     } finally {
       setIsSubmitting(false);

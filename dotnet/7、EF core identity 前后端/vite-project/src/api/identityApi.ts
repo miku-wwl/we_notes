@@ -68,8 +68,8 @@ export const register = (
  * @param data 登录表单数据
  * @returns 登录响应（含 accessToken）
  */
-export const login = (data: LoginFormData): Promise<ApiResponse<LoginResponse>> => {
-  return identityApi.post<ApiResponse<LoginResponse>>('/login', data).then(res => res.data);
+export const login = (data: LoginFormData): Promise<LoginResponse> => {
+  return identityApi.post<LoginResponse>('/login', data).then(res => res.data);
 };
 
 /**
