@@ -16,10 +16,12 @@ builder.Services.AddScoped<IProfileService, ProfileService>();
 // 配置CORS以允许前端调用
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:5173", "https://localhost:5173");
-    });
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:5173",
+                "http://localhost:4173");
+        });
 });
 
 

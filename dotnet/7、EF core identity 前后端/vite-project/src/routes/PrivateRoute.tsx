@@ -1,6 +1,6 @@
-import { Navigate, useLocation } from 'react-router-dom';
-import { isLoggedIn } from '../utils/tokenUtils';
-import type { ReactNode } from 'react';
+import { Navigate, useLocation } from "react-router";
+import { isLoggedIn } from "../utils/tokenUtils";
+import type { ReactNode } from "react";
 
 // 定义 Props 类型（仅子组件）
 interface PrivateRouteProps {
