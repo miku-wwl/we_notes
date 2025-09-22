@@ -13,6 +13,15 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 
+// 配置CORS以允许前端调用
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:5173", "https://localhost:5173");
+    });
+});
+
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
@@ -28,6 +37,9 @@ builder.Services.AddIdentityApiEndpoints<User.Domain.User>(opt =>
     .AddEntityFrameworkStores<AppDbContext>();
 
 var app = builder.Build();
+
+// 启用CORS
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,4 +1,4 @@
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router';
 import { type ReactNode, useState, useEffect } from 'react';
 import { isLoggedIn } from '../utils/tokenUtils';
 import { getCurrentProfile } from '../api/identityApi';

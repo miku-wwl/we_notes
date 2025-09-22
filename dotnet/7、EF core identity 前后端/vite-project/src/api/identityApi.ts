@@ -11,7 +11,7 @@ import type {
 
 // 创建 Axios 实例（带类型）
 const identityApi: AxiosInstance = axios.create({
-  baseURL: 'http://localhost:5222/api', // 替换为你的 .NET 后端地址
+  baseURL: 'http://localhost:5022', // 替换为你的 .NET 后端地址
   headers: {
     'Content-Type': 'application/json',
   },

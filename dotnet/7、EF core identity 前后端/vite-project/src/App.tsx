@@ -1,49 +1,44 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Register from './pages/Register';
-import Login from './pages/Login';
-import EmailConfirm from './pages/EmailConfirm';
-import Profile from './pages/Profile';
-import AdminPage from './pages/AdminPage';
-import PrivateRoute from './routes/PrivateRoute';
-import AdminRoute from './routes/AdminRoute';
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
+
 // 引入 Bootstrap 样式
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginForm from './pages/LoginForm';
+import ActivityDashboard from './pages/ActivityDashboard';
+import RequireAuth from './routes/RequireAuth';
+import ProfilePage from './pages/ProfilePage';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
         {/* 公开路由 */}
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/confirm-email" element={<EmailConfirm />} />
+        {/* TODO: 
+        <Route path="/register" element={<RegisterForm />} /> */}
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/activities" element={<ActivityDashboard />} />
 
-        {/* 受保护路由（需登录） */}
-        <Route
-          path="/profile"
-          element={
-            <PrivateRoute>
-              <Profile />
-            </PrivateRoute>
-          }
-        />
-
-        {/* 管理员路由（需 Admin 角色） */}
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <AdminPage />
-            </AdminRoute>
-          }
-        />
-
-        {/* 默认路由：跳转登录 */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<RequireAuth />}>
+          <Route path="profiles" element={<ProfilePage />} />
+       </Route>
       </Routes>
     </Router>
+
+
+    // <Router>
+    //   <Navbar />
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //     <Route path="/dashboard" element={<Dashboard />}>
+    //       <Route path="profile" element={<Profile />} />
+    //       <Route path="settings" element={<Settings />} />
+    //       <Route path="stats" element={<Stats />} />
+    //     </Route>
+    // </Routes>
+    // </Router >
+
+
   );
 };
 
