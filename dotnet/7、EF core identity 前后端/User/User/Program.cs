@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using User.Persistence;
+using User.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProfileService, ProfileService>();
+
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
