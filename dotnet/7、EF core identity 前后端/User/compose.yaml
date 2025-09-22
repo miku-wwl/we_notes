@@ -1,0 +1,7 @@
+﻿services:
+  user:
+    image: user
+    build:
+      context: .
+      dockerfile: User/Dockerfile
+

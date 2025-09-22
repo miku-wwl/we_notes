@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mxWDLajAwn4=",
+  "dgSpecHash": "8kyLZAvuD9A=",
   "success": true,
-  "projectFilePath": "D:\\tempShop\\RiderProjects\\web\\web\\web.csproj",
+  "projectFilePath": "D:\\workshop\\we_notes\\dotnet\\web\\web\\web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\weila\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "C:\\Users\\weila\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",

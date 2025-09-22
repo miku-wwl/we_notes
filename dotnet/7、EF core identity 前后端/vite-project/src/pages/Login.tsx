@@ -36,35 +36,37 @@ const Login: React.FC = () => {
   };
 
   // 提交登录
-  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
+const handleSubmit = async (e: React.FormEvent): Promise<void> => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setError('');
 
-    try {
-      // 调用登录接口，返回的是 ApiResponse<LoginResponse> 类型
-      const apiResponse: LoginResponse = await login(formData);
-      console.log('登录成功，返回数据：', apiResponse);
+  try {
+    // 调用登录接口，返回的是 ApiResponse<LoginResponse> 类型
+    const apiResponse: LoginResponse = await login(formData);
+    console.log('登录成功，返回数据：', apiResponse);
 
-      // 验证 Token 是否存在
-      if (apiResponse.accessToken) {
-        setToken(apiResponse.accessToken); // 存储 Token
-        navigate(fromPath, { replace: true }); // 跳转来源页
-      } else {
-        setError('登录失败：未获取到认证 Token！');
-      }
-    } catch (err) {
-      // 捕获 HTTP 错误（如 401/500 等状态码）
-      const error = err as AxiosError<ApiResponse<unknown>>;
-      // 优先取后端返回的错误信息，否则用默认提示
-      setError(
-        error.response?.data?.message ||
-        '登录失败：网络错误或服务器异常！'
-      );
-    } finally {
-      setIsSubmitting(false);
+    // 🔴 恢复：验证 Token 是否存在，仅在有 Token 时才跳转
+    if (apiResponse.accessToken) {
+      setToken(apiResponse.accessToken); // 存储 Token
+      navigate(fromPath, { replace: true }); // 跳转来源页
+    } else {
+      setError('登录失败：未获取到认证 Token！');
     }
-  };
+  } catch (err) {
+    console.error('登录失败，错误信息：', err);
+
+    // 🔴 恢复：捕获 HTTP 错误并设置错误提示
+    const errors = err as AxiosError<ApiResponse<unknown>>;
+    setError(
+      errors.response?.data?.message ||
+      '登录失败：网络错误或服务器异常！'
+    );
+  } finally {
+    // 🔴 恢复：无论成功/失败，都重置“提交中”状态
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="container mt-5">

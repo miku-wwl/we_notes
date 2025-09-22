@@ -483,11 +483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tempShop\\RiderProjects\\web\\web\\web.csproj",
+      "projectUniqueName": "D:\\workshop\\we_notes\\dotnet\\web\\web\\web.csproj",
       "projectName": "web",
-      "projectPath": "D:\\tempShop\\RiderProjects\\web\\web\\web.csproj",
+      "projectPath": "D:\\workshop\\we_notes\\dotnet\\web\\web\\web.csproj",
       "packagesPath": "C:\\Users\\weila\\.nuget\\packages\\",
-      "outputPath": "D:\\tempShop\\RiderProjects\\web\\web\\obj\\",
+      "outputPath": "D:\\workshop\\we_notes\\dotnet\\web\\web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\weila\\AppData\\Roaming\\NuGet\\NuGet.Config"
