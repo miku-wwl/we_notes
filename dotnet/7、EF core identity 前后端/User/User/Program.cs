@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using User.Domain;
 using User.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,14 +15,14 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-builder.Services.AddIdentityApiEndpoints<User.Domain.User>(opt => 
-{
-    opt.User.RequireUniqueEmail = false;
-    opt.Password.RequireUppercase = false;
-    opt.Password.RequireNonAlphanumeric = false;
-})
-.AddRoles<IdentityRole>()
-.AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddIdentityApiEndpoints<User.Domain.User>(opt =>
+    {
+        opt.User.RequireUniqueEmail = false;
+        opt.Password.RequireUppercase = false;
+        opt.Password.RequireNonAlphanumeric = false;
+    })
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
 
 var app = builder.Build();
 
