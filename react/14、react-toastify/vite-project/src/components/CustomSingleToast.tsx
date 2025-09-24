@@ -9,19 +9,7 @@ const CustomSingleToast: React.FC = () => {
       toastId: 'persistent-toast', // 自定义ID
       onClose: (reason?: string | boolean) => {
         // 关闭时触发回调，可判断关闭原因
-        if (reason === 'click') {
-          console.log('通知被点击关闭');
-        } else if (reason === 'drag') {
-          console.log('通知被拖拽关闭');
-        } else if (reason === 'timeout') {
-          console.log('通知超时自动关闭');
-        } else if (reason === 'closeButton') {
-          console.log('通过关闭按钮关闭');
-        } else if (reason === 'escapeKey') {
-          console.log('通过ESC键关闭');
-        } else {
-          console.log('通知被关闭，原因：', reason);
-        }
+          console.log('reason', reason);
       },
     };
 
