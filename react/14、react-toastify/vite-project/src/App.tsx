@@ -2,8 +2,6 @@ import React from 'react';
 import { ToastContainer, type ToastContainerProps } from 'react-toastify';
 import BasicToast from './components/BasicToast';
 import CustomSingleToast from './components/CustomSingleToast';
-import CustomContentToast from './components/CustomContentToast';
-import ManualControlToast from './components/ManualControlToast';
 import LoginForm from './components/LoginForm';
 
 const App: React.FC = () => {
@@ -30,12 +28,6 @@ const App: React.FC = () => {
       <hr style={{ margin: '20px 0' }} />
       
       <CustomSingleToast />
-      <hr style={{ margin: '20px 0' }} />
-      
-      <CustomContentToast />
-      <hr style={{ margin: '20px 0' }} />
-      
-      <ManualControlToast />
       <hr style={{ margin: '20px 0' }} />
       
       <LoginForm />
