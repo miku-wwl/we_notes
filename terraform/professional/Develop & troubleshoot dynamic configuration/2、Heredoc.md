@@ -1,10 +1,19 @@
 ``` terraform
-resource "local_file" "this" {
-    filename = "heredoc.txt"
-    content = <<-ABC
+resource "local_file" "basic" {
+    filename = "basic.txt"
+    content = <<EOT
     This is Line 1
-    Now it becomes a multi-line document
-    This is getting little confusing to read
-    ABC
+      This is Line 2
+         This is Line 3
+    EOT
+}
+
+resource "local_file" "indented" {
+    filename = "indented.txt"
+    content = <<-EOT
+    This is Line 1
+      This is Line 2
+        This is Line 3
+    EOT
 }
 ```
