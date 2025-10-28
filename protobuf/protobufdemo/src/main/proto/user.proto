@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.example.protobufdemo;
+
+// 生成的Java类配置
+option java_package = "com.example.protobufdemo.protobuf";
+option java_outer_classname = "UserProto";
+option java_multiple_files = true; // 生成多个文件而不是一个单一的外部类
+
+// 用户消息定义
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  int32 age = 4;
+  bool active = 5;
+
+  // 添加一个嵌套消息示例
+  message Address {
+    string street = 1;
+    string city = 2;
+    string country = 3;
+  }
+
+  // 可选的地址字段
+  optional Address address = 6;
+}
+
+// 用户列表消息
+message UserList {
+  repeated User users = 1; // repeated 表示可重复字段（列表）
+}
